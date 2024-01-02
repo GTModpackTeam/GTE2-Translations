@@ -1,7 +1,7 @@
 # GTE2 Translation
 ## Translation List
 
-- [GTE2 Questbook](./buildtools/qeustbook/README.md)
+- [GTE2 Questbook](https://github.com/GTModpackTeam/GTE2-Translations/tree/master/buildtools/questbook)
 - CoreMod translations are available in the [repository](https://github.com/GTModpackTeam/GTExpert-Core)
 
 ## Credits

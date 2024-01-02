@@ -5,5 +5,5 @@
 2. Download the `GTExpert2-<version>-ftbquests.zip`
 3. Open the GTE2 instance folder
 4. Remove the `normal` folder from the `config/ftbquests` folder
-5. Extract the downloaded zip file into the `config/ftbquests` folder
+5. Unzip the `normal` in the downloaded zip file into the `config/ftbquests` folder
 6. Run the instance and enjoy the game!
