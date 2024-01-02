@@ -46,16 +46,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./requirements.txt
+          pip install -r ./buildtools/questbook/requirements.txt
 
       - name: Run Python
         env:
           DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
-        run: python ./translate.py
+        run: python ./buildtools/questbook/translate.py
 
       - name: Archive Release
         run: |
-          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip ./ftbquests-new/
+          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip ./ftbquests-tl/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
