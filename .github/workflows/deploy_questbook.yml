@@ -24,7 +24,7 @@ jobs:
 
       - name: Check if tag already exists
         run: |
-          if git rev-parse --verify --quiet "v${{ github.event.inputs.version }}"; then
+          if git rev-parse --verify --quiet "${{ env.VERSION }}"; then
             echo "Version ${{ github.event.inputs.version }} already exists, aborting workflow."
             exit 1
           fi
@@ -53,19 +53,16 @@ jobs:
           DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
         run: python ./translate.py
 
-      - name: Archive Release MMC
+      - name: Archive Release
         run: |
-          rm ./ftbquests/
-          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests-tl.zip ./ftbquests-tl/
-          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests-new.zip ./ftbquests-new/
+          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip ./ftbquests-new/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "${{ env.FULL_VERSION }}"
+          tag_name: "${{ env.VERSION }}"
           draft: false
           prerelease: false
           generate_release_notes: true
           files: |
-            ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests-tl.zip
-            ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests-new.zip
+            ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip
