@@ -1,0 +1,118 @@
+#PARSE_ESCAPES
+
+itemGroup.storagedrawers=Storage Drawers
+itemGroup.storagedrawersSorting=Storage Drawers - Sorting
+
+storagedrawers.container.drawers=ドロワー
+storagedrawers.container.compDrawers=変換ドロワー
+storagedrawers.container.upgrades=アップグレード
+storagedrawers.container.drawer_controller=ドロワーコントローラ
+storagedrawers.container.unboundSlave=孤立しているコントローラ
+storagedrawers.container.framingTable=組み立て台
+
+storagedrawers.msg.maxUpgrades=このドロワーはこれ以上は機能を追加できません。
+storagedrawers.msg.cannotAddUpgrade=使用したアップグレードはこのドロワーに入れることができません。
+
+# Items
+item.storagedrawers.upgradeTemplate.name=アップグレードテンプレート
+item.storagedrawers.upgradeStorage.obsidian.name=容量拡張キット(I)
+item.storagedrawers.upgradeStorage.iron.name=容量拡張キット(II)
+item.storagedrawers.upgradeStorage.gold.name=容量拡張キット(III)
+item.storagedrawers.upgradeStorage.diamond.name=容量拡張キット(IV)
+item.storagedrawers.upgradeStorage.emerald.name=容量拡張キット(V)
+item.storagedrawers.upgradeOneStack.name=容量縮小キット
+item.storagedrawers.upgradeOneStack.description=収納容量を1スタックに制限します。
+item.storagedrawers.upgradeStatus.level1.name=容量表示キット(I)
+item.storagedrawers.upgradeStatus.level1.description=満タンになると光ります。
+item.storagedrawers.upgradeStatus.level2.name=容量表示キット(II)
+item.storagedrawers.upgradeStatus.level2.description=容量ゲージを表示します。
+item.storagedrawers.upgradeVoid.name=ボイド機能キット
+item.storagedrawers.upgradeVoid.description=入りきらない分のアイテムが消滅します。
+item.storagedrawers.upgradeConversion.name=鉱石辞書キット
+item.storagedrawers.upgradeConversion.description=鉱石辞書でアイテムを自動で変換します。
+item.storagedrawers.upgradeCreative.store.name=クリエイティブ容量キット
+item.storagedrawers.upgradeCreative.store.description=容量がほぼ無制限になります。
+item.storagedrawers.upgradeCreative.vend.name=クリエイティブ供給キット
+item.storagedrawers.upgradeCreative.vend.description=入れたアイテムを無限に取り出せるようにします。
+item.storagedrawers.upgradeRedstone.combined.name=レッドストーン信号キット
+item.storagedrawers.upgradeRedstone.combined.description=保管中のアイテムの量に応じたレッドストーン信号を出力します。
+item.storagedrawers.upgradeRedstone.max.name=レッドストーン信号キット(Max)
+item.storagedrawers.upgradeRedstone.max.description=複数のドロワーのうち、数量が一番大きいものに応じたレッドストーン信号を出力します。
+item.storagedrawers.upgradeRedstone.min.name=レッドストーン信号キット(Min)
+item.storagedrawers.upgradeRedstone.min.description=複数のドロワーのうち、数量が一番小さいものに応じたレッドストーン信号を出力します。
+item.storagedrawers.drawerKey.name=整頓の鍵
+item.storagedrawers.drawerKey.description=収納アイテムの種類を固定/解除します。
+item.storagedrawers.shroudKey.name=目隠しの鍵
+item.storagedrawers.shroudKey.description=アイテムアイコンの非表示/表示を切り替えます。
+item.storagedrawers.quantifyKey.name=在庫管理の鍵
+item.storagedrawers.quantifyKey.description=収納されているアイテムの数量を表示/非表示を切り替えます。
+item.storagedrawers.personalKey.name=防犯の鍵
+item.storagedrawers.personalKey.description=カギをかけた人物だけが出し入れできるようにします。
+item.storagedrawers.tape.name=梱包テープ
+item.storagedrawers.tape.description=ドロワーを壊しても中身を保持します。
+
+# Blocks
+tile.storagedrawers.basicDrawers.fulldrawers1.name=普通のドロワー
+tile.storagedrawers.basicDrawers.fulldrawers2.name=普通のドロワー 1x2
+tile.storagedrawers.basicDrawers.fulldrawers4.name=普通のドロワー 2x2
+tile.storagedrawers.basicDrawers.halfdrawers2.name=ハーフドロワー 1x2
+tile.storagedrawers.basicDrawers.halfdrawers4.name=ハーフドロワー 2x2
+
+tile.storagedrawers.customDrawers.fulldrawers1.name=ドロワーの骨組み
+tile.storagedrawers.customDrawers.fulldrawers2.name=ドロワーの骨組み 1x2
+tile.storagedrawers.customDrawers.fulldrawers4.name=ドロワーの骨組み 2x2
+tile.storagedrawers.customDrawers.halfdrawers2.name=ドロワーの骨組み 1x2
+tile.storagedrawers.customDrawers.halfdrawers4.name=ドロワーの骨組み 2x2
+
+tile.storagedrawers.fullCustom1.name=カスタムドロワー
+tile.storagedrawers.fullCustom2.name=カスタムドロワー 1x2
+tile.storagedrawers.fullCustom4.name=カスタムドロワー 2x2
+tile.storagedrawers.halfCustom2.name=薄型のカスタムドロワー 1x2
+tile.storagedrawers.halfCustom4.name=薄型のカスタムドロワー 2x2
+tile.storagedrawers.customTrim.name=カスタム飾り箱
+
+tile.storagedrawers.compDrawers.name=変換ドロワー
+tile.storagedrawers.controller.name=ドロワーコントローラ
+tile.storagedrawers.controllerSlave.name=セカンダリコントローラ
+tile.storagedrawers.framingTable.name=ドロワーテーブル
+
+tile.storagedrawers.trim.oak.name=オークの飾り箱
+tile.storagedrawers.trim.spruce.name=マツの飾り箱
+tile.storagedrawers.trim.birch.name=シラカバの飾り箱
+tile.storagedrawers.trim.jungle.name=ジャングルの飾り箱
+tile.storagedrawers.trim.acacia.name=アカシアの飾り箱
+tile.storagedrawers.trim.big_oak.name=ダークオークの飾り箱
+
+tile.storagedrawers.keyButton.drawer.name=整頓鍵のボタン
+tile.storagedrawers.keyButton.concealment.name=目隠し鍵のボタン
+tile.storagedrawers.keyButton.personal.name=防犯鍵のボタン
+tile.storagedrawers.keyButton.quantify.name=在庫管理鍵のボタン
+
+storagedrawers.drawers.description=1つのドロワーに %d スタック収納ができます。
+storagedrawers.drawers.sealed=中身が保持されています。
+storagedrawers.upgrade.description=容量を %d 倍にします。
+storagedrawers.controller.description=接続している近くのドロワーにアイテムを振り分けます。
+storagedrawers.controllerSlave.description=コントローラの接続点を増やます。
+
+# Material
+storagedrawers.material=素材: %s
+storagedrawers.material.oak=オーク
+storagedrawers.material.spruce=マツ
+storagedrawers.material.birch=シラカバ
+storagedrawers.material.jungle=ジャングル
+storagedrawers.material.acacia=アカシア
+storagedrawers.material.dark_oak=ダークオーク
+
+# Integration
+storagedrawers.waila.empty=<空>
+storagedrawers.waila.level=アップグレードレベル: %s
+storagedrawers.waila.drawer=#%s: %s
+storagedrawers.waila.limit=最大収納量: %s (x%s)
+storagedrawers.waila.nolimit=最大収納量: ∞
+storagedrawers.waila.locked=種類固定
+storagedrawers.waila.void=ボイド機能
+storagedrawers.waila.sorting=ソート
+storagedrawers.waila.protected=保護
+storagedrawers.waila.config.displayContents=収納の内容
+storagedrawers.waila.config.displayStackLimit=最大収納量
+storagedrawers.waila.config.displayStatus=アップグレードステータス
