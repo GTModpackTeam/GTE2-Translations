@@ -7,13 +7,18 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
-      version:
+      modpack_version:
         description: 'Modpack version'
+        required: true
+      questbook_version:
+        description: 'QuestBook version'
         required: true
 
 env:
-  VERSION: "v${{ github.event.inputs.version }}"
+  MODPACK_VERSION: "v${{ github.event.inputs.modpack_version }}"
+  QUESTBOOK_VERSION: "v${{ github.event.inputs.questbook_version }}"
   NAME: "GTExpert2"
+  FULL_NAME: "GTExpert2-v${{ github.event.inputs.modpack_version }}-ftbquests-${{ github.event.inputs.questbook_version }}"
 
 jobs:
   deploy:
@@ -24,8 +29,8 @@ jobs:
 
       - name: Check if tag already exists
         run: |
-          if git rev-parse --verify --quiet "${{ env.VERSION }}"; then
-            echo "Version ${{ github.event.inputs.version }} already exists, aborting workflow."
+          if git rev-parse --verify --quiet "${{ env.MODPACK_VERSION }}"; then
+            echo "Version ${{ github.event.inputs.modpack_version }} already exists, aborting workflow."
             exit 1
           fi
 
@@ -55,14 +60,14 @@ jobs:
 
       - name: Archive Release
         run: |
-          zip -r ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip ./ftbquests-tl/
+          zip -r ./${{ env.FULL_NAME }}.zip ./ftbquests-tl/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "${{ env.VERSION }}"
+          tag_name: "${{ env.MODPACK_VERSION }}"
           draft: false
           prerelease: false
           generate_release_notes: true
           files: |
-            ./${{ env.NAME }}-${{ env.VERSION }}-ftbquests.zip
+            ./${{ env.FULL_NAME }}.zip

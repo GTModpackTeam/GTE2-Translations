@@ -1,0 +1,49 @@
+name: Build Pack
+
+permissions:
+  contents: write
+  deployments: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      modpack_version:
+        description: 'Modpack version'
+        required: true
+      resourcepack_version:
+        description: 'ResourcePack version'
+        required: true
+
+env:
+  MODPACK_VERSION: "v${{ github.event.inputs.modpack_version }}"
+  RESOURCEPACK_VERSION: "v${{ github.event.inputs.resourcepack_version }}"
+  NAME: "GTExpert2"
+  FULL_NAME: "GTExpert2-v${{ github.event.inputs.modpack_version }}-resourcepack-v${{ github.event.inputs.resourcepack_version }}"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if tag already exists
+        run: |
+          if git rev-parse --verify --quiet "${{ env.MODPACK_VERSION }}"; then
+            echo "Version ${{ github.event.inputs.modpack_version }} already exists, aborting workflow."
+            exit 1
+          fi
+
+      - name: Archive Release
+        run: |
+          zip -r ./${{ env.FULL_NAME }}.zip ./resourcepack/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "${{ env.MODPACK_VERSION }}"
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            ./${{ env.FULL_NAME }}.zip
