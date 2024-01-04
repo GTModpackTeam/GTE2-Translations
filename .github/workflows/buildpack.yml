@@ -47,4 +47,4 @@ jobs:
           prerelease: false
           generate_release_notes: true
           files: |
-            ./${{ env.FULL_NAME }}.zip
+            ./resourcepack/${{ env.FULL_NAME }}.zip
