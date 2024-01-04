@@ -1,11 +1,11 @@
 # Tooltips
-tooltip.solcarrot.hearty.not_eaten=Not yet eaten! What does it taste like?
-tooltip.solcarrot.hearty.eaten=Eaten: Assisted in adding hearts
-tooltip.solcarrot.cheap.eaten=Eaten: No noticeable effect
-tooltip.solcarrot.cheap=This food is not nourishing enough to improve your health.
-tooltip.solcarrot.disabled.blacklist=This food is in the blacklist and thus cannot improve your health.
-tooltip.solcarrot.disabled.whitelist=This food is not in the whitelist and thus cannot improve your health.
-tooltip.solcarrot.disabled.eaten=Eaten: No noticeable effect
+tooltip.solcarrot.hearty.not_eaten=まだ食べていない! どんな味かな?
+tooltip.solcarrot.hearty.eaten=試食済み: 体力強化をアシスト
+tooltip.solcarrot.cheap.eaten=試食済み: 目立った効果なし
+tooltip.solcarrot.cheap=この食べ物は体力強化をさせるのに十分な栄養がない。
+tooltip.solcarrot.disabled.blacklist=この食品はブラックリストに載っているため体力強化の栄養とはならない。
+tooltip.solcarrot.disabled.whitelist=この食品はホワイトリストに載っているため体力強化の栄養とはならない。
+tooltip.solcarrot.disabled.eaten=試食済み: 目立った効果なし
 
 # Commands
 command.solcarrot.foodlist.size.usage=/foodlist size [player]
@@ -24,56 +24,41 @@ command.solcarrot.foodlist.sync.success=Food list synchronized!
 
 # Messages
 message.solcarrot.chat_wrapper=[SoL: Carrot] %s
-message.solcarrot.hearts.singular=a heart
-message.solcarrot.hearts.plural=%s hearts
-message.solcarrot.milestone_achieved=What a unique flavor! You've gained %s!
-message.solcarrot.finished.chat=Your desire to seek unique foods is finally satisfied.
-message.solcarrot.finished.hotbar=You've gained %s. Your desire to seek unique foods is finally satisfied.
+message.solcarrot.hearts.singular=ハート
+message.solcarrot.hearts.plural=%sつのハート
+message.solcarrot.milestone_achieved=なんてユニークな味なんだ! あなたは％sを獲得した!
+message.solcarrot.finished.chat=ユニークな食べ物を求める欲求がようやく満たされた。
+message.solcarrot.finished.hotbar=あなたは％sを獲得した。ユニークな食べ物を求める欲求がようやく満たされた。
 
 # Items
-item.solcarrot.food_book.name=Food Book
+item.solcarrot.food_book.name=フードブック
 
 # GUIs
-gui.solcarrot.food_book.stats=Overview
-gui.solcarrot.food_book.eaten_foods=Already Tasted: %s
-gui.solcarrot.food_book.uneaten_foods=Not Yet Tried: %s
-gui.solcarrot.food_book.config=Configuration
+gui.solcarrot.food_book.stats=概要
+gui.solcarrot.food_book.eaten_foods=既に試食済み: %s
+gui.solcarrot.food_book.uneaten_foods=まだ食べてない: %s
+gui.solcarrot.food_book.config=構成
 
 gui.solcarrot.food_book.fraction=%1$s/%2$s
 
-gui.solcarrot.food_book.stats.foods_tasted=Foods Tasted
-gui.solcarrot.food_book.stats.hearts_gained=Hearts Gained
-gui.solcarrot.food_book.stats.tooltip.progress=%s More Until Next Milestone
-gui.solcarrot.food_book.stats.tooltip.progress.max=Highest Milestone Reached!
-gui.solcarrot.food_book.stats.tooltip.previous_milestone=Last Milestone: %s
-gui.solcarrot.food_book.stats.tooltip.next_milestone=Next Milestone: %s
-gui.solcarrot.food_book.stats.tooltip.total_foods=%s Total Foods
-gui.solcarrot.food_book.stats.tooltip.foods_tasted=Foods Tasted: %s
-gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.singular=1 Heart per Milestone
-gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.plural=%s Hearts per Milestone
+gui.solcarrot.food_book.stats.foods_tasted=試食した食品
+gui.solcarrot.food_book.stats.hearts_gained=獲得したハート
+gui.solcarrot.food_book.stats.tooltip.progress=次のマイルストーンまであと%s
+gui.solcarrot.food_book.stats.tooltip.progress.max=マイルストーン達成!
+gui.solcarrot.food_book.stats.tooltip.previous_milestone=最後のマイルストーン: %s
+gui.solcarrot.food_book.stats.tooltip.next_milestone=次のマイルストーン: %s
+gui.solcarrot.food_book.stats.tooltip.total_foods=%s種類の食品
+gui.solcarrot.food_book.stats.tooltip.foods_tasted=試食した食品: %s
+gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.singular=マイルストーン到達ごとにハート1個
+gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.plural=マイルストーン到達ごとにハート%s個
 
-gui.solcarrot.food_book.config.minimum_food_value=Minimum Food Value
-gui.solcarrot.food_book.config.tooltip.minimum_food_value=The minimum hunger value foods need to provide in order to count towards milestones.
-gui.solcarrot.food_book.config.hearty_fraction=Nourishing Foods
-gui.solcarrot.food_book.config.tooltip.hearty_fraction=Out of %1$s foods, %2$s are nourishing enough to improve your health.
-gui.solcarrot.food_book.config.eaten_cheap_foods=Boring Foods Tasted
-gui.solcarrot.food_book.config.tooltip.eaten_cheap_foods=Out of the %1$s foods that aren't nourishing enough to improve your health, you've eaten %2$s.
-gui.solcarrot.food_book.config.blacklist=Blacklisted Foods
-gui.solcarrot.food_book.config.whitelist=Whitelisted Foods
-gui.solcarrot.food_book.config.tooltip.blacklist=How many foods have been disabled by the blacklist.
-gui.solcarrot.food_book.config.tooltip.whitelist=How many foods the whitelist allows.
-
-# Config GUI
-config.solcarrot.base_hearts=Base Hearts
-config.solcarrot.hearts_per_milestone=Hearts per Milestone
-config.solcarrot.milestones=Milestones
-config.solcarrot.is_food_tooltip_enabled=Enable Food Tooltip
-config.solcarrot.should_show_progress_above_hotbar=Show Progress Above Hotbar
-config.solcarrot.should_show_uneaten_foods=Show Uneaten Foods
-config.solcarrot.should_play_milestone_sounds=Enable Milestone Sounds
-config.solcarrot.should_spawn_intermediate_particles=Enable Intermediate Particles
-config.solcarrot.should_spawn_milestone_particles=Enable Milestone Particles
-config.solcarrot.food_blacklist=Blacklist
-config.solcarrot.food_whitelist=Whitelist (disables blacklist)
-config.solcarrot.minimum_food_value=Minimum Food Value
-config.solcarrot.reset_on_death=Reset on Death
+gui.solcarrot.food_book.config.minimum_food_value=最小限の空腹値
+gui.solcarrot.food_book.config.tooltip.minimum_food_value=マイルストーンへカウントするのに、食べ物などで満たせる最小限の空腹値。
+gui.solcarrot.food_book.config.hearty_fraction=栄養価の高い食品
+gui.solcarrot.food_book.config.tooltip.hearty_fraction=%1$sのうち、%2$sは健康を改善するのに十分な栄養価がある。
+gui.solcarrot.food_book.config.eaten_cheap_foods=つまらない食べ物
+gui.solcarrot.food_book.config.tooltip.eaten_cheap_foods=健康増進に十分な栄養のない%1$sのうち、あなたは%2$sを食べている。
+gui.solcarrot.food_book.config.blacklist=ブラックリストの食品
+gui.solcarrot.food_book.config.whitelist=ホワイトリストの食品
+gui.solcarrot.food_book.config.tooltip.blacklist=ブラックリストによって無効化された食品の数。
+gui.solcarrot.food_book.config.tooltip.whitelist=ホワイトリストによって有効化された食品の数。

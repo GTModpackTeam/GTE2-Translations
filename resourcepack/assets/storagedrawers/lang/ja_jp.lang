@@ -44,7 +44,7 @@ item.storagedrawers.drawerKey.name=整頓の鍵
 item.storagedrawers.drawerKey.description=収納アイテムの種類を固定/解除します。
 item.storagedrawers.shroudKey.name=目隠しの鍵
 item.storagedrawers.shroudKey.description=アイテムアイコンの非表示/表示を切り替えます。
-item.storagedrawers.quantifyKey.name=在庫管理の鍵
+item.storagedrawers.quantifyKey.name=数値化の鍵
 item.storagedrawers.quantifyKey.description=収納されているアイテムの数量を表示/非表示を切り替えます。
 item.storagedrawers.personalKey.name=防犯の鍵
 item.storagedrawers.personalKey.description=カギをかけた人物だけが出し入れできるようにします。
@@ -58,11 +58,11 @@ tile.storagedrawers.basicDrawers.fulldrawers4.name=普通のドロワー 2x2
 tile.storagedrawers.basicDrawers.halfdrawers2.name=ハーフドロワー 1x2
 tile.storagedrawers.basicDrawers.halfdrawers4.name=ハーフドロワー 2x2
 
-tile.storagedrawers.customDrawers.fulldrawers1.name=ドロワーの骨組み
-tile.storagedrawers.customDrawers.fulldrawers2.name=ドロワーの骨組み 1x2
-tile.storagedrawers.customDrawers.fulldrawers4.name=ドロワーの骨組み 2x2
-tile.storagedrawers.customDrawers.halfdrawers2.name=ドロワーの骨組み 1x2
-tile.storagedrawers.customDrawers.halfdrawers4.name=ドロワーの骨組み 2x2
+tile.storagedrawers.customDrawers.fulldrawers1.name=ドロワーフレーム
+tile.storagedrawers.customDrawers.fulldrawers2.name=ドロワーフレーム 1x2
+tile.storagedrawers.customDrawers.fulldrawers4.name=ドロワーフレーム 2x2
+tile.storagedrawers.customDrawers.halfdrawers2.name=ドロワーフレーム 1x2
+tile.storagedrawers.customDrawers.halfdrawers4.name=ドロワーフレーム 2x2
 
 tile.storagedrawers.fullCustom1.name=カスタムドロワー
 tile.storagedrawers.fullCustom2.name=カスタムドロワー 1x2
