@@ -2,4 +2,4 @@ itemGroup.framed_compacting_drawers=Framed Compacting Drawers
 
 tile.framedcompactdrawers.framed_compact_drawer.name=コンパクトドロワーフレーム
 tile.framedcompactdrawers.framed_drawer_controller.name=コントローラフレーム
-tile.framedcompactdrawers.framed_slave.name=セカンダリコントローラフレーム
+tile.framedcompactdrawers.framed_slave.name=スレーブコントローラフレーム

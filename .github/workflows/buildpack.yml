@@ -1,4 +1,4 @@
-name: Build Pack
+name: Build ResourcePack
 
 permissions:
   contents: write
@@ -36,7 +36,8 @@ jobs:
 
       - name: Archive Release
         run: |
-          zip -r ./${{ env.FULL_NAME }}.zip ./resourcepack/*
+          cd ./resourcepack
+          zip -r ./${{ env.FULL_NAME }}.zip ./assets/ ./pack.mcmeta ./pack.png
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

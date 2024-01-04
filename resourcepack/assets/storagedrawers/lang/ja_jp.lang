@@ -4,7 +4,7 @@ itemGroup.storagedrawers=Storage Drawers
 itemGroup.storagedrawersSorting=Storage Drawers - Sorting
 
 storagedrawers.container.drawers=ドロワー
-storagedrawers.container.compDrawers=変換ドロワー
+storagedrawers.container.compDrawers=コンパクトドロワー
 storagedrawers.container.upgrades=アップグレード
 storagedrawers.container.drawer_controller=ドロワーコントローラ
 storagedrawers.container.unboundSlave=孤立しているコントローラ
@@ -71,9 +71,9 @@ tile.storagedrawers.halfCustom2.name=薄型のカスタムドロワー 1x2
 tile.storagedrawers.halfCustom4.name=薄型のカスタムドロワー 2x2
 tile.storagedrawers.customTrim.name=カスタム飾り箱
 
-tile.storagedrawers.compDrawers.name=変換ドロワー
+tile.storagedrawers.compDrawers.name=コンパクトドロワー
 tile.storagedrawers.controller.name=ドロワーコントローラ
-tile.storagedrawers.controllerSlave.name=セカンダリコントローラ
+tile.storagedrawers.controllerSlave.name=スレーブコントローラ
 tile.storagedrawers.framingTable.name=ドロワーテーブル
 
 tile.storagedrawers.trim.oak.name=オークの飾り箱
