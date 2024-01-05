@@ -1,0 +1,31 @@
+itemGroup.torchmaster=TorchMaster
+
+tile.torchmaster.mega_torch.lit.name=メガトーチ
+tile.torchmaster.mega_torch.unlit.name=未点火のメガトーチ
+tile.torchmaster.terrain_lighter.name=地形のライター
+tile.torchmaster.dread_lamp.name=恐怖のランプ
+tile.torchmaster.feral_flare_lantern.name=フレアランタン
+
+item.torchmaster.frozen_pearl.name=凍ったパール
+
+tile.torchmaster.mega_torch.lit.tooltip=トーチの周囲にいる敵対的なモンスターの自然スポーンを防ぐ。
+tile.torchmaster.mega_torch.unlit.tooltip=トーチの周囲にいる敵対的なモンスターの自然スポーンを防ぐ。
+tile.torchmaster.terrain_lighter.tooltip=自動的に松明を設置する。動作には松明、燃料、レッドストーン信号が必要です。
+tile.torchmaster.dread_lamp.tooltip=ランプを中心とした半径の広い範囲で、イカ、コウモリ、オセロットなどの中立モブの自然スポーンを防ぐ。
+tile.torchmaster.feral_flare_lantern.tooltip=ゆっくりと広範囲を照らす。ランタンを取り外すと光源がゆっくりと消滅する。
+
+item.torchmaster.frozen_pearl.tooltip=フレアランタンの光源を消す。
+
+tile.torchmaster.mega_torch.light_failed_itemcount=§C松明を灯すのに十分なアイテムを持っていない。§r
+tile.torchmaster.mega_torch.light_failed_itemtoodamaged=§Cアイテムが破損しており、トーチに点火できません。§r
+tile.torchmaster.mega_torch.torch_is_lit=§2松明はすでに燃えています。§r
+
+tile.torchmaster.mega_torch.lit.burntime_left=残り時間: %s.%s:%s:%s
+
+container.torchmaster.terrain_lighter=地形のライター
+gui.torchmaster.block.state.no_signal=レッドストーン信号なし
+gui.torchmaster.feral_flare_lantern.state.los_on.short=見える範囲を灯す: §A有効§r
+gui.torchmaster.feral_flare_lantern.state.los_on.description=ランタンは自分が直接見ることができる場所にのみ$nのライトを設置する。
+gui.torchmaster.feral_flare_lantern.state.los_off.short=見える範囲を灯す: §C無効§r
+gui.torchmaster.feral_flare_lantern.state.los_off.description=ランタンはあらゆる場所に光源を設置する。
+
