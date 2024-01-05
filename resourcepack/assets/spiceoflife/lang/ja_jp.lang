@@ -29,8 +29,8 @@ spiceoflife.gui.time.elapsed.since.food.eaten=%s前に食べました。
 spiceoflife.gui.x.day=%s日
 spiceoflife.gui.x.days=%s日
 spiceoflife.gui.expires.in.time=飽きが来るのは%s
-spiceoflife.gui.expires.in.food=%s個くらい他を食べるか、そこそこの%sが経ったらまた食べようかな。
-spiceoflife.gui.expires.in.hunger=%s個くらい他の食料を食べたらまた食べようかな。
+spiceoflife.gui.expires.in.food=%s個くらい他を食べるか、%sが経ったらまた食べよう。
+spiceoflife.gui.expires.in.hunger=%s個くらい他の食料を食べたらまた食べよう。
 spiceoflife.gui.food.num=%d個目
 spiceoflife.gui.items.on.page=%d-%d of %d
 
