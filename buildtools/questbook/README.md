@@ -7,3 +7,7 @@
 4. Remove the `normal` folder from the `config/ftbquests` folder
 5. Unzip the `normal` in the downloaded zip file into the `config/ftbquests` folder
 6. Run the instance and enjoy the game!
+
+## TODO
+
+- Currently, the only way to translate the file is in English. If we want to increase the number of languages, we need to change the file names.

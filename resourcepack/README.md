@@ -1,4 +1,9 @@
 # GTE2 Translation - Install Mods
+
+## Introduction
+
+- Only mods that have not been or are not being translated will be addressed(Mainly ja_jp.lang).
+
 ## How to translate
 
 1. First, you need to download the [latest version](https://github.com/GTModpackTeam/GTE2-Translations/releases)
