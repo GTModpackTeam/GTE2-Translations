@@ -1,0 +1,68 @@
+item.threng:material0.name=Fluix Steel Ingot
+item.threng:material1.name=Carbonic Fluix Complex
+item.threng:material2.name=Fluix-Plated Iron Ingot
+item.threng:material3.name=Coal Dust
+item.threng:material4.name=Fluix Logic Unit
+item.threng:material5.name=Resonating Crystal
+item.threng:material6.name=Massively Parallel Processor
+item.threng:material7.name=Speculation Core (1x)
+item.threng:material8.name=Speculation Core (2x)
+item.threng:material9.name=Speculation Core (4x)
+item.threng:material10.name=Speculation Core (8x)
+item.threng:material11.name=Speculation Core (16x)
+item.threng:material12.name=Speculation Core (32x)
+item.threng:material13.name=Speculation Core (64x)
+item.threng:material14.name=Speculative Processor
+
+tile.threng:machine0.name=フルーシュアグリゲータ
+tile.threng:machine1.name=振動遠心機
+tile.threng:machine2.name=ME回路食刻機
+tile.threng:machine3.name=初歩的なアセンブリユニット
+tile.threng:machine4.name=MEレベルメンテナ
+tile.threng:machine5.name=クリスタルエナジャイザ
+tile.threng:big_assembler0.name=マスアセンブラフレーム
+tile.threng:big_assembler1.name=マスアセンブラベント
+tile.threng:big_assembler2.name=マスアセンブラコントローラ
+tile.threng:big_assembler3.name=MAパターンプロバイダ
+tile.threng:big_assembler4.name=MAクラフティングコプロセッサ
+tile.threng:big_assembler5.name=マスアセンブラ入出力ポート
+
+threng.container.aggregator=フルーシュアグリゲータ
+threng.container.centrifuge=振動遠心機
+threng.container.etcher=ME回路食刻機
+threng.container.fast_crafter=PAユニット
+threng.container.level_maintainer=MEレベルメンテナ
+threng.container.big_assembler=MAチャンバー
+threng.container.energizer=クリスタルエナジャイザ
+
+threng.misc.tooltip.request_size=動作維持電力
+threng.misc.tooltip.batch_size=クラフトのバッチサイズ
+threng.misc.tooltip.work_fraction=%d/%d クラフト
+threng.misc.tooltip.job_count=%d/%d クエリタスク
+threng.misc.tooltip.cpu_count=%d 並列処理
+threng.misc.tooltip.work_rate=%d work/tick
+threng.misc.tooltip.page_num=ページ %d/%d
+
+threng.misc.notif.multiblock_formed=構造に問題なし
+threng.misc.notif.multiblock_failed=構造に不備あり
+threng.misc.notif.multiblock_unformed=構造を解体
+
+threng.misc.side.up=上面
+threng.misc.side.left=左面
+threng.misc.side.front=前面
+threng.misc.side.right=右面
+threng.misc.side.down=下面
+threng.misc.side.back=背面
+
+threng.misc.io.input=挿入
+threng.misc.io.output=搬出
+threng.misc.io.omni=全て
+threng.misc.io.none=なし
+
+threng.misc.auto_export.off=自動搬出を無効化 (現在は有効)
+threng.misc.auto_export.on=自動搬出を有効化 (現在は無効)
+
+threng.int.jei.category.aggregator=フルーシュアグリゲータ
+threng.int.jei.category.centrifuge=振動遠心機
+threng.int.jei.category.etcher=ME回路食刻機
+threng.int.jei.category.energizer=クリスタルエナジャイザ

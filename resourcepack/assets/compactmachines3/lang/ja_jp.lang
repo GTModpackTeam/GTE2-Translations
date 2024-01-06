@@ -42,13 +42,13 @@ tooltip.compactmachines3.machine.coords.unused=未使用
 tooltip.compactmachines3.machine.schema=Schema:
 tooltip.compactmachines3.machine.stopitsoaryn=Feedbackloop detected
 
-tooltip.compactmachines3.hold_shift.hint=SHIFTでコンパクトマシン詳細を表示
+tooltip.compactmachines3.hold_shift.hint=SHIFTで詳細を表示
 tooltip.compactmachines3.psd.hint=ゲーム内のドキュメントとして、またコンパクトマシンへの入場にも使用する。
 tooltip.compactmachines3.fieldprojector.hint=Place 4 opposite of each other to create a Miniaturization Crafting field. Right click to get hints where the next projector needs to be!
 tooltip.compactmachines3.tunneltool.hint=コンパクトマシンの内部と外側の面を接続するために使用します。
 tooltip.compactmachines3.redstonetunneltool.hint=コンパクトマシンの内部と外側の面でレッドストーン信号を伝達するために使用します。
 tooltip.compactmachines3.wall.hint=警告! このブロックはクリエイティブモード以外では壊せません!
-tooltip.compactmachines3.machine.hint=%sは%sの大きさの空間を提供します。
+tooltip.compactmachines3.machine.hint=%sは%sの空間を提供します。
 
 tooltip.compactmachines3.lockforotherplayers.checkbox=他プレイヤーからロック
 
