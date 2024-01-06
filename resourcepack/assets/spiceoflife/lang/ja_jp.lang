@@ -1,9 +1,9 @@
 # Tooltip strings
 spiceoflife.tooltip.nutritional.value=栄養価の高さ: 
-spiceoflife.tooltip.eaten.recently=この食べ物は%s中%d食べました。
+spiceoflife.tooltip.eaten.recently=この食べ物は%s回中%d回食べました。
 spiceoflife.tooltip.eaten.recently.hunger=最後の%sの満腹度で%sを食べました。
 spiceoflife.tooltip.eaten.recently.time=過去%s日間に%sを食べました。
-spiceoflife.tooltip.not.eaten.recently=最近は食べてない
+spiceoflife.tooltip.not.eaten.recently=どんな味かな?
 spiceoflife.tooltip.food.until.enabled.1=Diminishing returns start after
 spiceoflife.tooltip.food.until.enabled.2=eating any food %d more %s
 spiceoflife.tooltip.times.singular=時間
@@ -17,17 +17,17 @@ spiceoflife.tooltip.can.spill.food=開いたままにしていると食べ物が
 spiceoflife.tooltip.hold.key.for.details=%sを押すと詳細を表示します。
 
 # Quantity descriptors
-spiceoflife.quantity.one.time=1回
-spiceoflife.quantity.two.times=2回
-spiceoflife.quantity.x.times=%d回
+spiceoflife.quantity.one.time=1
+spiceoflife.quantity.two.times=2
+spiceoflife.quantity.x.times=%d
 
 # Gui
 spiceoflife.gui.alltime.food.eaten=All-time food eaten
 spiceoflife.gui.no.food.history.yet=Food history not logged until diminishing returns start
 spiceoflife.gui.no.recent.food.eaten=最近に食べたものはありません。
-spiceoflife.gui.time.elapsed.since.food.eaten=%s前に食べました。
-spiceoflife.gui.x.day=%s日
-spiceoflife.gui.x.days=%s日
+spiceoflife.gui.time.elapsed.since.food.eaten=%s日前に食べました。
+spiceoflife.gui.x.day=%s
+spiceoflife.gui.x.days=%s
 spiceoflife.gui.expires.in.time=飽きが来るのは%s
 spiceoflife.gui.expires.in.food=%s個くらい他を食べるか、%sが経ったらまた食べよう。
 spiceoflife.gui.expires.in.hunger=%s個くらい他の食料を食べたらまた食べよう。
