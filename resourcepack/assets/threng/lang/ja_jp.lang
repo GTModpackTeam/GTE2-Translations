@@ -56,7 +56,7 @@ threng.misc.side.back=背面
 
 threng.misc.io.input=挿入
 threng.misc.io.output=搬出
-threng.misc.io.omni=全て
+threng.misc.io.omni=入出力
 threng.misc.io.none=なし
 
 threng.misc.auto_export.off=自動搬出を無効化 (現在は有効)
