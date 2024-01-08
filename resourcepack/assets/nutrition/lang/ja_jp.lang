@@ -7,11 +7,11 @@ gui.nutrition:close=閉じる
 gui.nutrition:updating=更新中...
 
 # Nutrients (Can be customized using Resource Packs)
-nutrient.nutrition:grain=Grain
-nutrient.nutrition:fruit=Fruit
-nutrient.nutrition:vegetable=Vegetable
-nutrient.nutrition:protein=Protein
-nutrient.nutrition:dairy=Dairy
+nutrient.nutrition:grain=穀物
+nutrient.nutrition:fruit=果実
+nutrient.nutrition:vegetable=野菜
+nutrient.nutrition:protein=タンパク質
+nutrient.nutrition:dairy=乳製品
 
 # Tooltips
 tooltip.nutrition:nutrients=栄養素:
