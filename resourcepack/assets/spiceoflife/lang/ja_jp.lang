@@ -4,8 +4,8 @@ spiceoflife.tooltip.eaten.recently=この食べ物は%s個中%d個食べまし�
 spiceoflife.tooltip.eaten.recently.hunger=最後の%sの満腹度で%sを食べました。
 spiceoflife.tooltip.eaten.recently.time=過去%s日間に%sを食べました。
 spiceoflife.tooltip.not.eaten.recently=どんな味かな?
-spiceoflife.tooltip.food.until.enabled.1=Diminishing returns start after
-spiceoflife.tooltip.food.until.enabled.2=eating any food %d more %s
+spiceoflife.tooltip.food.until.enabled.1=飽きが来るのは
+spiceoflife.tooltip.food.until.enabled.2=%d個食べるか%sが経ったら。
 spiceoflife.tooltip.times.singular=時間
 spiceoflife.tooltip.times.plural=時間
 spiceoflife.tooltip.hunger=hunger
@@ -22,8 +22,8 @@ spiceoflife.quantity.two.times=2
 spiceoflife.quantity.x.times=%d
 
 # Gui
-spiceoflife.gui.alltime.food.eaten=All-time food eaten
-spiceoflife.gui.no.food.history.yet=Food history not logged until diminishing returns start
+spiceoflife.gui.alltime.food.eaten=食べ続けたもの
+spiceoflife.gui.no.food.history.yet=飽きが来るまで、食事日記には記録されない
 spiceoflife.gui.no.recent.food.eaten=最近に食べたものはありません。
 spiceoflife.gui.time.elapsed.since.food.eaten=%s日前に食べました。
 spiceoflife.gui.x.day=%s
