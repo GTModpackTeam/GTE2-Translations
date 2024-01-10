@@ -6,7 +6,14 @@ source_path = "ftbquests"
 target_path = "ftbquests-tl"
 
 auth_key = os.environ["DEEPL_AUTH_KEY"]
-tl = deepl.Translator(auth_key)
+
+# Language code can be known in https://www.deepl.com/docs-api/general/get-languages
+target_lang_code = "EN-US"
+
+# In some area on this earth, you should set a proper api server site at first.
+server_url = "https://api.deepl.com"
+
+tl = translator = deepl.Translator(auth_key, server_url=server_url)
 
 # this matches every "" sequence that contains a non-ascii unicode character
 # also accounts for escaped \" groups inside the double quotes
@@ -39,7 +46,7 @@ def translate(s):
     # un-escape the string so that it doesnt confuse deepl
     res = s[1:-1].replace('\\"', '"')
     res = tl.translate_text(
-        res, source_lang="JA", target_lang="EN-US", preserve_formatting=True
+        res, source_lang="JA", target_lang=target_lang_code , preserve_formatting=True
     ).text
     return '"' + res.replace('"', '\\"') + '"'
 
