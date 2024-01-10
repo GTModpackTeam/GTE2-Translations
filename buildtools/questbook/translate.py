@@ -65,11 +65,11 @@ def main():
         print("translation seems up to date")
         return
     for fp in to_translate:
-        with open(os.path.join(source_path, fp), "r") as f:
+        with open(os.path.join(source_path, fp), "r", encoding='utf-8') as f:
             s = f.read()
             print(f"translating {fp}...")
             translated = regex_replace(match_jap, s, translate)
-            with open(os.path.join(target_path, fp), "x") as tf:
+            with open(os.path.join(target_path, fp), "x", encoding='utf-8') as tf:
                 tf.write(translated)
     print("done")
 
