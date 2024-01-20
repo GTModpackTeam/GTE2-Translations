@@ -26,9 +26,9 @@ command.solcarrot.foodlist.sync.success=Food list synchronized!
 message.solcarrot.chat_wrapper=[SoL: Carrot] %s
 message.solcarrot.hearts.singular=ハート
 message.solcarrot.hearts.plural=%sつのハート
-message.solcarrot.milestone_achieved=なんてユニークな味なんだ! あなたは％sを獲得した!
+message.solcarrot.milestone_achieved=なんてユニークな味なんだ! あなたは%sを獲得した!
 message.solcarrot.finished.chat=ユニークな食べ物を求める欲求がようやく満たされた。
-message.solcarrot.finished.hotbar=あなたは％sを獲得した。ユニークな食べ物を求める欲求がようやく満たされた。
+message.solcarrot.finished.hotbar=あなたは%sを獲得した。ユニークな食べ物を求める欲求がようやく満たされた。
 
 # Items
 item.solcarrot.food_book.name=食べログ
