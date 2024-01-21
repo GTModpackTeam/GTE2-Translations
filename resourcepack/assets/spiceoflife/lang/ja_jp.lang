@@ -1,6 +1,6 @@
 # Tooltip strings
 spiceoflife.tooltip.nutritional.value=栄養価の高さ: 
-spiceoflife.tooltip.eaten.recently=直近の%d種類中%s個食べました。
+spiceoflife.tooltip.eaten.recently=直近の%s種類中%d個食べました。
 spiceoflife.tooltip.eaten.recently.hunger=最後の%sの満腹度で%sを食べました。
 spiceoflife.tooltip.eaten.recently.time=過去%s日間に%sを食べました。
 spiceoflife.tooltip.not.eaten.recently=どんな味かな?
