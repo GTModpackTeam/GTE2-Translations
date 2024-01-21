@@ -1,14 +1,14 @@
 # Tooltip strings
 spiceoflife.tooltip.nutritional.value=栄養価の高さ: 
-spiceoflife.tooltip.eaten.recently=この食べ物は%s個中%d個食べました。
+spiceoflife.tooltip.eaten.recently=直近の%d種類中%s個食べました。
 spiceoflife.tooltip.eaten.recently.hunger=最後の%sの満腹度で%sを食べました。
 spiceoflife.tooltip.eaten.recently.time=過去%s日間に%sを食べました。
 spiceoflife.tooltip.not.eaten.recently=どんな味かな?
-spiceoflife.tooltip.food.until.enabled.1=飽きが来るのは
+spiceoflife.tooltip.food.until.enabled.1=食べ物の飽きが始まるのは
 spiceoflife.tooltip.food.until.enabled.2=%d個食べるか%sが経ったら。
 spiceoflife.tooltip.times.singular=時間
 spiceoflife.tooltip.times.plural=時間
-spiceoflife.tooltip.hunger=hunger
+spiceoflife.tooltip.hunger=空腹
 spiceoflife.tooltip.food.group=Food Group: 
 spiceoflife.tooltip.food.groups=Food Groups: 
 spiceoflife.tooltip.to.close.food.container=スニークしながらクリックで閉めます。
@@ -23,12 +23,12 @@ spiceoflife.quantity.x.times=%d
 
 # Gui
 spiceoflife.gui.alltime.food.eaten=食べ続けたもの
-spiceoflife.gui.no.food.history.yet=飽きが来るまで、食事日記には記録されない
+spiceoflife.gui.no.food.history.yet=飽きが始まるまで、食事日記には記録されない
 spiceoflife.gui.no.recent.food.eaten=最近に食べたものはありません。
 spiceoflife.gui.time.elapsed.since.food.eaten=%s日前に食べました。
 spiceoflife.gui.x.day=%s
 spiceoflife.gui.x.days=%s
-spiceoflife.gui.expires.in.time=飽きが来るのは%s
+spiceoflife.gui.expires.in.time=食べ物の飽きが始まるのは%s
 spiceoflife.gui.expires.in.food=%s個くらい他を食べるか、%sが経ったらまた食べよう。
 spiceoflife.gui.expires.in.hunger=%s個くらい他の食料を食べたらまた食べよう。
 spiceoflife.gui.food.num=%d個目
