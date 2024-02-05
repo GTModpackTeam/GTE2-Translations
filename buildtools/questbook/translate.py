@@ -11,7 +11,7 @@ auth_key = os.environ["DEEPL_AUTH_KEY"]
 target_lang_code = os.environ["TARGET_LANG_CODE"]
 
 # In some area on this earth, you should set a proper api server site at first.
-server_url = "https://api.deepl.com"
+server_url = "https://api-free.deepl.com"
 
 tl = translator = deepl.Translator(auth_key, server_url=server_url)
 
