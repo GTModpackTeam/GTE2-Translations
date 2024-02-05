@@ -14,6 +14,6 @@
 6. Run the instance and enjoy the game!
 
 ## Other translations
-- CoreMod translations are available in the [repository](https://github.com/GTModpackTeam/GTExpert-Core)
-- CustomMainMenu translations are available in the [repository](https://github.com/GTModpackTeam/GregTech-Expert-2/tree/main/overrides/resources)
-- ModPack tooltip translations are available in the [repository](https://github.com/GTModpackTeam/GregTech-Expert-2/tree/main/overrides/resources)
+- CoreMod translations are available in the [repository](https://github.com/GTModpackTeam/GTExpert-Core/tree/master/src/main/resources/assets/gtexpert/lang)
+- CustomMainMenu translations are available in the [repository](https://github.com/GTModpackTeam/GregTech-Expert-2/tree/main/overrides/resources/custommainmenu/lang)
+- ModPack tooltip translations are available in the [repository](https://github.com/GTModpackTeam/GregTech-Expert-2/tree/main/overrides/resources/modpack/lang)

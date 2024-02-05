@@ -3,12 +3,12 @@ import re
 import os
 
 source_path = "ftbquests"
-target_path = "ftbquests-tl"
+target_path = "ftbquests-tl-" + os.environ["TARGET_LANG_CODE"]
 
 auth_key = os.environ["DEEPL_AUTH_KEY"]
 
 # Language code can be known in https://www.deepl.com/docs-api/general/get-languages
-target_lang_code = "EN-US"
+target_lang_code = os.environ["TARGET_LANG_CODE"]
 
 # In some area on this earth, you should set a proper api server site at first.
 server_url = "https://api.deepl.com"
