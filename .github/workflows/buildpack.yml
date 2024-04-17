@@ -40,7 +40,7 @@ jobs:
           zip -r ./${{ env.FULL_NAME }}.zip ./assets/ ./pack.mcmeta ./pack.png
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: "${{ env.MODPACK_VERSION }}"
           draft: false
