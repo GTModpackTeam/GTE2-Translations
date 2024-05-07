@@ -1,7 +1,7 @@
 # Japanese translate by MrKo_no
 # 翻訳担当 : MrKo_no
-# Corresponding Version: 1.10.0.2
-# 対応バージョン: 1.10.0.2
+# Corresponding Version: 1.11.1
+# 対応バージョン: 1.11.1
 
 metaitem.phycomyces.culture.name=ヒゲカビ菌床
 metaitem.component.corn.ear.name=トウモロコシ
@@ -846,6 +846,7 @@ metaitem.food.shepherds_pie.tooltip=中身を考えると、おそらくイン�
 metaitem.food.sausage_roll.name=ソーセージロール
 metaitem.food.baked_beans.name=炒り豆
 metaitem.food.beans_on_toast.name=豆トースト
+metaitem.food.beans_on_toast.tooltip="ポレンタのようなものだが、もっとひどい"
 metaitem.food.fried_fish.name=魚フライ
 metaitem.food.battered_fish.name=魚のバターソテー
 metaitem.food.beer.name=ビール
@@ -1148,3 +1149,43 @@ gregtechfoodoption.berry.description.2=ティア上昇させるためには、�
 gregtechfoodoption.berry.description.3=§4茂みを中心とした3x3は、最低1つは空気ブロックでなければならない!
 
 gregtechfoodoption.blocked=周囲をブロックで囲まれているため、%sにはベリーの茂みを設置できません!
+
+metaitem.component.coconut.name=ココナッツ
+metaitem.component.coconut.tooltip=冷血な殺人鬼
+
+gregtechfoodoption.seed.0=§b種として利用できます
+gregtechfoodoption.seed.root_crop=§r種が収穫できる§4直前のみ§r収穫できます!
+
+gregtechfoodoption.multiblock.kitchen.no_recipe=レシピアイテムがありません! (または未設定です)
+gregtechfoodoption.multiblock.kitchen.buses_full=アイテムバスが一杯です!
+gregtechfoodoption.multiblock.kitchen.hatches_full=液体ハッチが一杯です!
+gregtechfoodoption.multiblock.kitchen.bad_machines=正しい機械がありません/機械のTierが足りません!
+gregtechfoodoption.multiblock.kitchen.no_ingredients=材料がありません!
+gregtechfoodoption.multiblock.kitchen.probably_fine=レシピを実行中...
+gregtechfoodoption.multiblock.kitchen.order_complete=注文が完了しました!
+
+gregtechfoodoption.multiblock.kitchen.very_dirty=キッチンの掃除が必要です!
+gregtechfoodoption.multiblock.kitchen.order_size=作成数: %s アイテム
+gregtechfoodoption.multiblock.kitchen.dirtiness=汚れ: %s DU
+gregtechfoodoption.multiblock.kitchen.increment_order=作成数を1増やす
+gregtechfoodoption.multiblock.kitchen.decrement_order=作成数を1減らす
+
+
+gregtechfoodoption.fluid.cleaning=清掃能力: §2%s§r DU/L!
+
+gregtechfoodoption.kitchen.recipe.warn=食料関係のアイテムを置いてください!
+
+metaitem.bone_ash_dust.name=骨灰
+metaitem.unfired_porcelain_tile_plate.name=未焼成の磁器タイル
+metaitem.bisque_porcelain_tile_plate.name=無釉薬の磁器タイル
+metaitem.glazed_porcelain_tile_plate.name=艶出しをした磁器タイル
+metaitem.black_glazed_porcelain_tile_plate.name=黒色の艶出しをした磁器タイル
+metaitem.utility.kitchen_recipe.name=キッチンレシピ
+metaitem.utility.kitchen_recipe.tooltip=右クリックでJEIからGTFOレシピを追加! §4シングルブロック§rのレシピがキッチンと連動する。
+gregtechfoodoption.kitchen_recipe.final_result=§3生産 %s
+
+gregtechfoodoption.machine.kitchen.tooltip.1=§4JEIのみ利用可能
+gregtechfoodoption.machine.kitchen.tooltip.2=キッチンレシピで料理関連のレシピを実行する
+gregtechfoodoption.machine.kitchen.tooltip.3=シングルブロック機械を磁器タイルの上に!
+gregtechfoodoption.machine.kitchen.tooltip.4=JEIプレビューより大きいサイズであれば、どのサイズでも構いません.
+gregtechfoodoption.machine.kitchen.tooltip.5=§4効率を維持するには清掃用品が必要です!
