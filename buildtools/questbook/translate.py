@@ -21,7 +21,7 @@ def translate_text(text, translator, source_lang='JA', target_lang=target_lang_c
     return translator.translate_text(text, source_lang=source_lang, target_lang=target_lang).text
 
 def translate_json_values(json_data, translator, keys_to_translate=['name:8', 'desc:8']):
-    for quest_data in json_data.get('questDatabase:9', {}).items():
+    for quest_id, quest_data in json_data.get('questDatabase:9', {}).items():
         for key in keys_to_translate:
             if key in quest_data.get('properties:10', {}).get('betterquesting:10', {}):
                 original_text = quest_data['properties:10']['betterquesting:10'][key]
