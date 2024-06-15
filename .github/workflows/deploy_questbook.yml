@@ -7,6 +7,10 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      choice_language:
+        description: 'Language'
+        default: EN-US, ZH
+        required: true
       questbook_branch:
         description: 'QuestBook branch'
         type: choice
@@ -26,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: ['EN-US', 'ZH']
+        language: ["${{ github.event.inputs.choice_language }}"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -67,4 +71,4 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-          files: ./DefaultQuests_${{ matrix.language }}.json
+          files: ./bqu/DefaultQuests_${{ matrix.language }}.json
