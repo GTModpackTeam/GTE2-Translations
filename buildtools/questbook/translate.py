@@ -16,15 +16,18 @@ def load_json_file(file_path):
         return json.load(file)
 
 def translate_text(text, translator, source_lang='JA', target_lang=target_lang_code):
+    if not text.strip():
+        return text
     return translator.translate_text(text, source_lang=source_lang, target_lang=target_lang).text
 
 def translate_json_values(json_data, translator, keys_to_translate=['name:8', 'desc:8']):
-    for quest_id, quest_data in json_data.get('questDatabase:9', {}).items():
+    for quest_data in json_data.get('questDatabase:9', {}).items():
         for key in keys_to_translate:
             if key in quest_data.get('properties:10', {}).get('betterquesting:10', {}):
                 original_text = quest_data['properties:10']['betterquesting:10'][key]
-                translated_text = translate_text(original_text, translator)
-                quest_data['properties:10']['betterquesting:10'][key] = translated_text
+                if original_text:
+                    translated_text = translate_text(original_text, translator)
+                    quest_data['properties:10']['betterquesting:10'][key] = translated_text
     return json_data
 
 def save_json_file(file_path, data):
