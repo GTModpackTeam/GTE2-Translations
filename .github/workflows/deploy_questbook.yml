@@ -7,25 +7,30 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      choice_language:
+        description: 'Language'
+        default: EN-US, ZH
+        required: true
+      questbook_branch:
+        description: 'QuestBook branch'
+        type: choice
+        default: 'main'
+        options:
+          - 'main'
+          - 'preview'
       modpack_version:
         description: 'Modpack version'
-        required: true
-      questbook_version:
-        description: 'QuestBook version'
         required: true
 
 env:
   MODPACK_VERSION: "v${{ github.event.inputs.modpack_version }}"
-  QUESTBOOK_VERSION: "v${{ github.event.inputs.questbook_version }}"
-  NAME: "GTExpert2"
-  FULL_NAME: "GTExpert2-v${{ github.event.inputs.modpack_version }}-ftbquests-${{ github.event.inputs.questbook_version }}"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: ['EN-US', 'ZH']
+        language: ["${{ github.event.inputs.choice_language }}"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,13 +42,8 @@ jobs:
             exit 1
           fi
 
-      - name: Download quest zip
-        run: |
-          wget -O questbook.zip https://github.com/GTModpackTeam/GregTech-Expert-2-FTBQuestBook/archive/refs/heads/main.zip
-          unzip questbook.zip
-          mkdir ./ftbquests/
-          mv -vf ./GregTech-Expert-2-FTBQuestBook-main/* ./ftbquests/
-          rm -rf ./GregTech-Expert-2-FTBQuestBook-main/ ./questbook.zip
+      - name: Download quest json
+        run: wget -O ./DefaultQuests.json https://raw.githubusercontent.com/GTModpackTeam/GregTech-Expert-2/${{ github.event.inputs.questbook_branch }}/overrides/config/betterquesting/DefaultQuests.json
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -60,11 +60,9 @@ jobs:
         env:
           DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
           TARGET_LANG_CODE: ${{ matrix.language }}
-        run: python ./buildtools/questbook/translate.py
-
-      - name: Archive Release
         run: |
-          zip -r ./${{ env.FULL_NAME }}-${{ matrix.language }}.zip ./ftbquests-tl-${{ matrix.language }}/
+          mkdir ./bqu/
+          python ./buildtools/questbook/translate.py
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -73,5 +71,4 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-          files: |
-            ./${{ env.FULL_NAME }}-*.zip
+          files: ./bqu/DefaultQuests_${{ matrix.language }}.json
