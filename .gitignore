@@ -1,4 +1,5 @@
-ftbquests/
-ftbquests-tl/
-ftbquests-new/
+DefaultQuests.json
+bqu/
+bqu-tl/
+bqu-new/
 out/
