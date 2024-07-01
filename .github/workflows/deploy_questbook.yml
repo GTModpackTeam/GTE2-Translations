@@ -7,10 +7,6 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
-      choice_language:
-        description: 'Language'
-        default: EN-US, ZH
-        required: true
       questbook_branch:
         description: 'QuestBook branch'
         type: choice
@@ -30,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: ['"${{ github.event.inputs.choice_language }}"']
+        language: ['EN-US', 'ZH']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
