@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: ["${{ github.event.inputs.choice_language }}"]
+        language: ${{ fromJSON(github.event.inputs.choice_language) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
