@@ -21,13 +21,17 @@ def translate_text(text, translator, source_lang='JA', target_lang=target_lang_c
     return translator.translate_text(text, source_lang=source_lang, target_lang=target_lang).text
 
 def translate_json_values(json_data, translator, keys_to_translate=['name:8', 'desc:8']):
-    for quest_id, quest_data in json_data.get('questDatabase:9', {}).items():
+    quest_database = json_data.get('questDatabase:9', {})
+    total_quests = len(quest_database)
+    for index, (quest_id, quest_data) in enumerate(quest_database.items()):
         for key in keys_to_translate:
             if key in quest_data.get('properties:10', {}).get('betterquesting:10', {}):
                 original_text = quest_data['properties:10']['betterquesting:10'][key]
                 if original_text:
                     translated_text = translate_text(original_text, translator)
                     quest_data['properties:10']['betterquesting:10'][key] = translated_text
+        progress = (index + 1) / total_quests * 100
+        print(f"{progress:.2f}%: {quest_id}")
     return json_data
 
 def save_json_file(file_path, data):
