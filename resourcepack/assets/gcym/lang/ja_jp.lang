@@ -1,7 +1,7 @@
 # Japanese translate by MrKo_no
 # 日本語ローカライズ担当： MrKo_no
-# Corresponding Version: 1.2.4
-# 対応バージョン : 1.2.4
+# Corresponding Version: 1.2.11
+# 対応バージョン : 1.2.11
 
 # multiblocks
 gcym.machine.large_macerator.name=大型塔式粉砕機
@@ -41,7 +41,7 @@ gcym.machine.large_circuit_assembler.name=大型回路組立機
 
 gcym.tooltip.parallel_enabled=§b並列制御ユニット§7によって並列処理数が決定される
 gcym.tooltip.tiered_hatch_enabled=動作には§b電圧制御ユニット§7が必要
-gcym.multiblock.tiered_hatch.tooltip=対応上限 EU/t: §a%s (%s§r)
+gcym.multiblock.tiered_hatch.tooltip=実行上限 EU/t: §a%s (%s§r)
 
 
 
@@ -86,7 +86,7 @@ gcym.machine.parallel_hatch.uv.name=スーパー並列制御ユニット
 gcym.machine.parallel_hatch.tooltip=§b%s§7レシピまで並列処理できる
 gcym.machine.parallel_hatch.display=マルチブロック機械の並列処理の最大値を制御する
 
-gcym.machine.tiered_hatch.tooltip.1=%s§7電圧まで利用可能になる
+gcym.machine.tiered_hatch.tooltip.1=%s§7電圧までのレシピが実行可能になる
 
 gcym.machine.tiered_hatch.ulv.name=初歩的な電圧制御ユニット
 gcym.machine.tiered_hatch.lv.name=基本圧制御ユニット
@@ -104,6 +104,7 @@ gcym.machine.tiered_hatch.umv.name=史上最高の電圧制御ユニット
 gcym.machine.tiered_hatch.uxv.name=伝説的な電圧制御ユニット
 gcym.machine.tiered_hatch.max.name=マキシマム電圧制御ユニット
 
+gcym.tooltip.max_energy_hatches=エナジーハッチ上限: §c%d§7個
 
 # casings
 
