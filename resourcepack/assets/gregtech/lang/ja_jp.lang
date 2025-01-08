@@ -5,3 +5,8 @@
 
 # Cracking Unit format fixes
 gregtech.multiblock.cracking_unit.energy=エネルギー使用量: %s
+
+# Fix IV-ZPM Packer tooltip
+gregtech.machine.packer.iv.tooltip=梱包装置
+gregtech.machine.packer.luv.tooltip=梱包装置
+gregtech.machine.packer.zpm.tooltip=梱包装置
