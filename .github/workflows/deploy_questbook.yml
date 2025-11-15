@@ -23,13 +23,13 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     strategy:
       matrix:
         language: ['EN-US']
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check if tag already exists
         run: |
@@ -41,26 +41,16 @@ jobs:
       - name: Download quest json
         run: wget -O ./DefaultQuests.json https://raw.githubusercontent.com/GTModpackTeam/GregTech-Expert-2/${{ github.event.inputs.questbook_branch }}/overrides/config/betterquesting/DefaultQuests.json
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-  
       - name: Install uv
-        shell: bash
-        run: pip install uv
-  
-      - name: Setup Python Cache 
-        uses: actions/cache@v4
+        uses: astral-sh/setup-uv@v6
         with:
-          path: ~/.cache/uv
-          key: ${{ runner.os }}-uv-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-uv-
+          enable-cache: true
+          python-version-file: ./buildtools/pyproject.toml
 
       - name: Install dependencies
         shell: bash
-        run: uv pip install --system -r ./buildtools/questbook/requirements.txt
+        working-directory: ./buildtools
+        run: uv sync
 
       - name: Run Python
         env:
@@ -68,7 +58,7 @@ jobs:
           TARGET_LANG_CODE: ${{ matrix.language }}
         run: |
           mkdir ./bqu/
-          python ./buildtools/questbook/translate.py
+          uv run --directory ./buildtools python ./questbook/translate.py
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
