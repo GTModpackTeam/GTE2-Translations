@@ -10,3 +10,6 @@ gregtech.multiblock.cracking_unit.energy=エネルギー使用量: %s
 gregtech.machine.packer.iv.tooltip=梱包装置
 gregtech.machine.packer.luv.tooltip=梱包装置
 gregtech.machine.packer.zpm.tooltip=梱包装置
+
+# Power Substation tooltip
+gregtech.machine.power_substation.tooltip5=蓄電ブロック当たり§f最大%,d EU/t§7の受動損失。
