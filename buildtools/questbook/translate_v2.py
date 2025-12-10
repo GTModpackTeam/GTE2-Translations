@@ -6,7 +6,7 @@ from pathlib import Path
 
 # Language code can be known in https://www.deepl.com/docs-api/general/get-languages
 target_lang_code = os.environ["TARGET_LANG_CODE"]
-source_lang_code = "ja-JP"
+source_lang_code = "JA"  # DeepL source_lang requires language code only (no country code)
 
 # You should set your deepl auth key in your environment variable.
 auth_key = os.environ["DEEPL_AUTH_KEY"]
