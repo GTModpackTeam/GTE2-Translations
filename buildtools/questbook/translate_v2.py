@@ -171,7 +171,7 @@ def main():
 
     # 4. Create ZIP archive for GitHub Actions artifact
     print("\nCreating ZIP archive...")
-    zip_output = f"./bqu/DefaultQuests_{target_lang_code}"
+    zip_output = f"../bqu/DefaultQuests_{target_lang_code}"
     shutil.make_archive(zip_output, 'zip', output_base)
     print(f"ZIP archive created: {zip_output}.zip")
 
