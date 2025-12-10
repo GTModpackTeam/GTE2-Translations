@@ -76,9 +76,33 @@ jobs:
         env:
           DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
           TARGET_LANG_CODE: ${{ matrix.language }}
+          INPUT_DIR: ${{ github.workspace }}/tmp/DefaultQuests
+          OUTPUT_DIR: ${{ github.workspace }}/bqu
         run: |
-          mkdir ./bqu/
+          mkdir -p ./bqu/
           uv run --directory ./buildtools python ./questbook/translate_v2.py
+
+      - name: Verify ZIP file
+        run: |
+          echo "Checking if ZIP was created..."
+          ls -lh ./bqu/
+          if [ ! -f "./bqu/DefaultQuests_${{ matrix.language }}.zip" ]; then
+            echo "ERROR: ZIP file not found!"
+            exit 1
+          fi
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: questbook-${{ matrix.language }}
+          path: ./bqu/DefaultQuests_${{ matrix.language }}.zip
+          retention-days: 1
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: questbook-${{ matrix.language }}
+          path: ./artifacts/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -87,4 +111,4 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-          files: ./bqu/DefaultQuests_${{ matrix.language }}.zip
+          files: ./artifacts/DefaultQuests_${{ matrix.language }}.zip

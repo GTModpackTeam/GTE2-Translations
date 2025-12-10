@@ -135,9 +135,11 @@ def translate_quests(input_dir, output_dir, translator):
 def main():
     translator = deepl.Translator(auth_key, server_url=server_url)
 
-    # When run via uv with --directory, we need to go up one level
-    input_base = "../tmp/DefaultQuests"
-    output_base = f"../bqu/DefaultQuests_{target_lang_code}"
+    # Use environment variables for paths (set by GitHub Actions)
+    # Fallback to relative paths for local development
+    input_base = os.environ.get("INPUT_DIR", "../tmp/DefaultQuests")
+    output_dir = os.environ.get("OUTPUT_DIR", "../bqu")
+    output_base = f"{output_dir}/DefaultQuests_{target_lang_code}"
 
     if not os.path.exists(input_base):
         print(f"ERROR: Input directory {input_base} does not exist!")
@@ -171,7 +173,7 @@ def main():
 
     # 4. Create ZIP archive for GitHub Actions artifact
     print("\nCreating ZIP archive...")
-    zip_output = f"../bqu/DefaultQuests_{target_lang_code}"
+    zip_output = f"{output_dir}/DefaultQuests_{target_lang_code}"
     shutil.make_archive(zip_output, 'zip', output_base)
     print(f"ZIP archive created: {zip_output}.zip")
 
