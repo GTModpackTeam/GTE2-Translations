@@ -41,6 +41,10 @@ def translate_betterquesting_properties(properties, translator, keys_to_translat
 
 def translate_quest_settings(input_path, output_path, translator):
     """Translate QuestSettings.json (pack_name:8)"""
+    if not os.path.exists(input_path):
+        print(f"Warning: {input_path} not found, skipping...")
+        return
+
     data = load_json_file(input_path)
     if 'betterquesting:10' in data and 'pack_name:8' in data['betterquesting:10']:
         original_name = data['betterquesting:10']['pack_name:8']
@@ -73,10 +77,19 @@ def count_quest_files(quests_dir):
 def translate_quest_lines(input_dir, output_dir, translator):
     """Translate all quest line files"""
     input_path = Path(input_dir)
+
+    if not input_path.exists():
+        print(f"Warning: {input_dir} directory not found, skipping...")
+        return
+
     output_path = Path(output_dir)
 
     quest_line_files = sorted(input_path.glob('*.json'))
     total = len(quest_line_files)
+
+    if total == 0:
+        print(f"Warning: No quest line files found in {input_dir}")
+        return
 
     for index, file_path in enumerate(quest_line_files):
         relative_path = file_path.relative_to(input_path)
@@ -88,10 +101,20 @@ def translate_quest_lines(input_dir, output_dir, translator):
 def translate_quests(input_dir, output_dir, translator):
     """Translate all quest files recursively"""
     input_path = Path(input_dir)
+
+    if not input_path.exists():
+        print(f"Warning: {input_dir} directory not found, skipping...")
+        return
+
     output_path = Path(output_dir)
 
     # Count total files for progress
     total_quests = count_quest_files(input_dir)
+
+    if total_quests == 0:
+        print(f"Warning: No quest files found in {input_dir}")
+        return
+
     processed = 0
 
     # Walk through all subdirectories
@@ -115,8 +138,22 @@ def main():
     input_base = "./tmp/DefaultQuests"
     output_base = f"./bqu/DefaultQuests_{target_lang_code}"
 
+    # Debug: Check what files exist in the input directory
+    print(f"Checking input directory: {input_base}")
+    if os.path.exists(input_base):
+        print(f"Contents of {input_base}:")
+        for item in os.listdir(input_base):
+            item_path = os.path.join(input_base, item)
+            if os.path.isdir(item_path):
+                print(f"  [DIR]  {item}")
+            else:
+                print(f"  [FILE] {item}")
+    else:
+        print(f"ERROR: Input directory {input_base} does not exist!")
+        return
+
     # 1. Translate QuestSettings.json
-    print("Translating QuestSettings.json...")
+    print("\nTranslating QuestSettings.json...")
     translate_quest_settings(
         f"{input_base}/QuestSettings.json",
         f"{output_base}/QuestSettings.json",

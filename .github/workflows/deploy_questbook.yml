@@ -49,8 +49,32 @@ jobs:
           wget -O repo.zip https://github.com/GTModpackTeam/GregTech-Expert-2/archive/refs/heads/${{ github.event.inputs.questbook_branch }}.zip
           unzip -q repo.zip
           mkdir -p ./tmp
-          mv GregTech-Expert-2-${{ github.event.inputs.questbook_branch }}/overrides/config/betterquesting/DefaultQuests ./tmp/DefaultQuests
-          rm -rf repo.zip GregTech-Expert-2-${{ github.event.inputs.questbook_branch }}
+
+          # Debug: Check what was extracted
+          echo "Checking extracted directory..."
+          ls -la
+
+          # Find the extracted directory (it might have a different name)
+          EXTRACTED_DIR=$(find . -maxdepth 1 -type d -name "GregTech-Expert-2-*" | head -n 1)
+          echo "Found extracted directory: $EXTRACTED_DIR"
+
+          # Debug: Check directory structure
+          echo "Checking directory structure..."
+          ls -la "$EXTRACTED_DIR/overrides/config/betterquesting/" || echo "betterquesting directory not found"
+
+          # Check if DefaultQuests exists
+          if [ -d "$EXTRACTED_DIR/overrides/config/betterquesting/DefaultQuests" ]; then
+            echo "DefaultQuests directory found!"
+            ls -la "$EXTRACTED_DIR/overrides/config/betterquesting/DefaultQuests/"
+            mv "$EXTRACTED_DIR/overrides/config/betterquesting/DefaultQuests" ./tmp/DefaultQuests
+            echo "Files successfully moved to ./tmp/DefaultQuests:"
+            ls -la ./tmp/DefaultQuests/
+          else
+            echo "ERROR: DefaultQuests directory not found in expected location"
+            exit 1
+          fi
+
+          rm -rf repo.zip "$EXTRACTED_DIR"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v7
