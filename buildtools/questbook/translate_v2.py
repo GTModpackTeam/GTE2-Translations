@@ -135,20 +135,11 @@ def translate_quests(input_dir, output_dir, translator):
 def main():
     translator = deepl.Translator(auth_key, server_url=server_url)
 
-    input_base = "./tmp/DefaultQuests"
-    output_base = f"./bqu/DefaultQuests_{target_lang_code}"
+    # When run via uv with --directory, we need to go up one level
+    input_base = "../tmp/DefaultQuests"
+    output_base = f"../bqu/DefaultQuests_{target_lang_code}"
 
-    # Debug: Check what files exist in the input directory
-    print(f"Checking input directory: {input_base}")
-    if os.path.exists(input_base):
-        print(f"Contents of {input_base}:")
-        for item in os.listdir(input_base):
-            item_path = os.path.join(input_base, item)
-            if os.path.isdir(item_path):
-                print(f"  [DIR]  {item}")
-            else:
-                print(f"  [FILE] {item}")
-    else:
+    if not os.path.exists(input_base):
         print(f"ERROR: Input directory {input_base} does not exist!")
         return
 
