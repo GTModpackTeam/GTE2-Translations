@@ -20,9 +20,11 @@ on:
 
 env:
   MODPACK_VERSION: "v${{ github.event.inputs.modpack_version }}"
+  NAME: "GTExpert2"
+  FULL_NAME: "GTExpert2-v${{ github.event.inputs.modpack_version }}-questbook"
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-slim
     strategy:
       matrix:
@@ -36,13 +38,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y zip jq wget
-
-      - name: Check if tag already exists
-        run: |
-          if git rev-parse --verify --quiet "${{ env.MODPACK_VERSION }}"; then
-            echo "Version ${{ github.event.inputs.modpack_version }} already exists, aborting workflow."
-            exit 1
-          fi
 
       - name: Download quest files
         run: |
@@ -91,18 +86,39 @@ jobs:
             exit 1
           fi
 
+      - name: Rename ZIP file
+        run: |
+          mv ./bqu/DefaultQuests_${{ matrix.language }}.zip ./bqu/${{ env.FULL_NAME }}-${{ matrix.language }}.zip
+          ls -lh ./bqu/
+
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: questbook-${{ matrix.language }}
-          path: ./bqu/DefaultQuests_${{ matrix.language }}.zip
+          path: ./bqu/${{ env.FULL_NAME }}-${{ matrix.language }}.zip
           retention-days: 1
 
-      - name: Download Artifacts
+  release:
+    needs: build
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Check if tag already exists
+        run: |
+          if git rev-parse --verify --quiet "${{ env.MODPACK_VERSION }}"; then
+            echo "Version ${{ github.event.inputs.modpack_version }} already exists, aborting workflow."
+            exit 1
+          fi
+
+      - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          name: questbook-${{ matrix.language }}
           path: ./artifacts/
+
+      - name: Display structure of downloaded files
+        run: ls -lhR ./artifacts/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -111,4 +127,4 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-          files: ./artifacts/DefaultQuests_${{ matrix.language }}.zip
+          files: ./artifacts/**/*.zip
