@@ -1,0 +1,80 @@
+#ja_JP
+tile.ae2stuff.grower.name=クリスタル成長機
+tile.ae2stuff.inscriber.name=発展型刻印機
+tile.ae2stuff.wireless.name=無線コネクタ
+tile.ae2stuff.wireless_hub.name=無線ハブ
+
+tile.ae2stuff.wireless_hub.tooltip1=最大 %s 個の無線コネクタと接続できます
+
+item.ae2stuff.wireless_kit.name=無線設定キット
+item.ae2stuff.adv_wireless_kit.name=発展型無線設定キット
+item.ae2stuff.visualiser.name=ネットワーク可視化ツール
+
+ae2stuff.error.not_connected=ネットワークに接続されていません
+
+ae2stuff.keybinding.adv_wireless_second=発展型無線キット セカンダリ
+
+ae2stuff.waila.sleep.true=オフライン
+ae2stuff.waila.sleep.false=オンライン
+ae2stuff.waila.power=%s / %s AE
+
+ae2stuff.waila.wireless.connected=%s,%s,%s と接続中
+ae2stuff.top.wireless.connected=と接続中
+ae2stuff.waila.wireless.notconnected=未接続
+ae2stuff.waila.wireless.channels=チャンネル数: %s
+ae2stuff.top.wireless.channels=チャンネル数:
+ae2stuff.waila.wireless.power=消費パワー: %s AE/t
+ae2stuff.top.wireless.power=消費パワー:
+ae2stuff.waila.wireless.name=名前: %s
+ae2stuff.top.wireless.name=名前:
+ae2stuff.waila.wireless.hub_connections=接続数: %s / %s
+ae2stuff.top.wireless.hub_connections=接続数:
+
+ae2stuff.gui.lock.on=ロック - 自動化による取り出し不可
+ae2stuff.gui.lock.off=アンロック - 自動化による取り出し可能
+ae2stuff.gui.lock.note=処理が進行中でなく、中央スロットが空の場合
+
+ae2stuff.gui.recipes=レシピ
+
+ae2stuff.wireless.tool.empty=無線コネクタをクリックして接続
+ae2stuff.wireless.tool.bound1=接続 %s,%s,%s
+ae2stuff.wireless.tool.bound2=接続する為に、他の無線コネクタをクリックします
+ae2stuff.wireless.tool.connected=%s,%s,%s と接続しました
+ae2stuff.wireless.tool.failed=接続に失敗しました
+ae2stuff.wireless.tool.dimension=コネクタ同士は同じディメンションである必要があります
+ae2stuff.wireless.tool.noexist=接続先のコネクタが存在しません
+ae2stuff.wireless.tool.security.network=セキュリティ違反 - ネットワークに接続できません
+ae2stuff.wireless.tool.security.player=セキュリティ違反 - あなたはこのネットワークを変更することはできません
+ae2stuff.wireless.tool.targethubfull=対象のハブが満杯です
+ae2stuff.wireless.tool.twohubs=2つの無線ハブをリンクすることはできません
+
+ae2stuff.wireless.advtool.queueing=§aキューモード
+ae2stuff.wireless.advtool.binding=§aバインドモード
+ae2stuff.wireless.advtool.queueing.activated=キューモードを有効にしました
+ae2stuff.wireless.advtool.binding.activated=バインドモードを有効にしました
+ae2stuff.wireless.advtool.queued=%s,%s,%s のコネクタをキューに追加しました
+ae2stuff.wireless.advtool.queuederror=コネクタは既にキューに追加されています
+ae2stuff.wireless.advtool.queueing.empty=無線コネクタをクリックしてバインドキューに追加
+ae2stuff.wireless.advtool.binding.empty=キューモードに切り替えてコネクタをキューに追加してください
+ae2stuff.wireless.advtool.queueing.notempty=現在キューに登録されている無線コネクタ:
+ae2stuff.wireless.advtool.binding.notempty=バインド予定のキューに登録されている無線コネクタ:
+ae2stuff.wireless.advtool.connector.next=キュー内の次のコネクタ: %s,%s,%s
+ae2stuff.wireless.advtool.extra=§oShift + 右クリックでキューモードとバインドモードを切り替え
+ae2stuff.wireless.advtool.noconnectors=キューにコネクタが見つかりません。ツールをキューモードにして追加してください
+ae2stuff.wireless.advtool.pop=%s,%s,%s をキューから削除しました
+ae2stuff.wireless.advtool.hub.queued=%s 個のハブスロットをキューに追加しました
+ae2stuff.wireless.advtool.queueing.clear=キューをクリアしました
+ae2stuff.wireless.tooltips.advtool.queueing.clear=Shift + %s + 右クリックでキューをクリア
+ae2stuff.wireless.tooltips.advtool.hubqols.binding=%s + 右クリックで空きハブスロット全てに接続
+ae2stuff.wireless.tooltips.advtool.hubqols.queueing=%s + 右クリックで空きハブスロット全てをキューに追加
+
+ae2stuff.visualiser.bound=%s,%s,%s のネットワークを視覚化
+ae2stuff.visualiser.mode=モード:
+ae2stuff.visualiser.set=モード切替 %s
+ae2stuff.visualiser.mode.full=全て表示
+ae2stuff.visualiser.mode.nodes=ノードを表示
+ae2stuff.visualiser.mode.channels=チャンネル図を表示
+ae2stuff.visualiser.mode.nonum=チャンネル図とノードを表示
+ae2stuff.visualiser.mode.p2p=P2Pを表示
+
+itemGroup.bdew.ae2stuff=AE2 Stuff Unofficial
