@@ -47,8 +47,8 @@ item.nae2.part.exposer.name=MEストレージエクスポーザー
 item.nae2.upgrade.hyper_acceleration.name=超加速カード
 item.nae2.upgrade.auto_complete.name=ジョブ自動補完カード
 item.nae2.upgrade.auto_complete.desc=出力を待たずに自動的にジョブを完了させる。
-item.nae2.upgrade.gregtech_circuit.name=プログラムサーキットカード
-item.nae2.upgrade.gregtech_circuit.desc=機械とバスにプログラムサーキットを自動的に設定します。\nエンコード済みパターンに対応するサーキットが必要です。\nブロッキングモードを有効にすることを忘れないでください!
+item.nae2.upgrade.gregtech_circuit.name=プログラム回路カード
+item.nae2.upgrade.gregtech_circuit.desc=機械とバスにプログラム回路を自動的に設定します。\nエンコード済みパターンに対応するプログラム回路が必要です。\nブロッキングモードを有効にすることを忘れないでください!
 
 # Tiles
 tile.nae2.reconstruction_chamber.name=原子再構成機
