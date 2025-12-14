@@ -10,6 +10,7 @@ item.nae2.pattern_multiplier.name=パターンマルチツール
 # Cells
 item.nae2.storage_cell_void.name=MEボイドストレージセル
 item.nae2.fluid_storage_cell_void.name=ME液体ボイドストレージセル
+item.nae2.gas_storage_cell_void.name=MEガスボイドストレージセル
 item.nae2.storage_cell_256k.name=§c256k§r MEストレージセル
 item.nae2.storage_cell_1024k.name=§61024k§r MEストレージセル
 item.nae2.storage_cell_4096k.name=§e4096k§r MEストレージセル
@@ -18,6 +19,10 @@ item.nae2.storage_cell_fluid_256k.name=§c256k§r ME液体ストレージセル
 item.nae2.storage_cell_fluid_1024k.name=§61024k§r ME液体ストレージセル
 item.nae2.storage_cell_fluid_4096k.name=§e4096k§r ME液体ストレージセル
 item.nae2.storage_cell_fluid_16384k.name=§a16384k§r ME液体ストレージセル
+item.nae2.storage_cell_gas_256k.name=§c256k§r MEガスストレージセル
+item.nae2.storage_cell_gas_1024k.name=§61024k§r MEガスストレージセル
+item.nae2.storage_cell_gas_4096k.name=§e4096k§r MEガスストレージセル
+item.nae2.storage_cell_gas_16384k.name=§a16384k§r MEガスストレージセル
 
 # Materials
 item.nae2.material.cell_part_void.name=MEボイドストレージコンポーネント
@@ -29,6 +34,10 @@ item.nae2.material.cell_part_fluid_256k.name=§c256k§r ME液体ストレージ�
 item.nae2.material.cell_part_fluid_1024k.name=§61024k§r ME液体ストレージコンポーネント
 item.nae2.material.cell_part_fluid_4096k.name=§e4096k§r ME液体ストレージコンポーネント
 item.nae2.material.cell_part_fluid_16384k.name=§a16384k§r ME液体ストレージコンポーネント
+item.nae2.material.cell_part_gas_256k.name=§c256k§r MEガスストレージコンポーネント
+item.nae2.material.cell_part_gas_1024k.name=§61024k§r MEガスストレージコンポーネント
+item.nae2.material.cell_part_gas_4096k.name=§e4096k§r MEガスストレージコンポーネント
+item.nae2.material.cell_part_gas_16384k.name=§a16384k§r MEガスストレージコンポーネント
 
 # Parts
 item.nae2.part.beam_former.name=MEビームフォーマー
@@ -38,6 +47,8 @@ item.nae2.part.exposer.name=MEストレージエクスポーザー
 item.nae2.upgrade.hyper_acceleration.name=超加速カード
 item.nae2.upgrade.auto_complete.name=ジョブ自動補完カード
 item.nae2.upgrade.auto_complete.desc=出力を待たずに自動的にジョブを完了させる。
+item.nae2.upgrade.gregtech_circuit.name=プログラムサーキットカード
+item.nae2.upgrade.gregtech_circuit.desc=機械とバスにプログラムサーキットを自動的に設定します。\nエンコード済みパターンに対応するサーキットが必要です。\nブロッキングモードを有効にすることを忘れないでください!
 
 # Tiles
 tile.nae2.reconstruction_chamber.name=原子再構成機
