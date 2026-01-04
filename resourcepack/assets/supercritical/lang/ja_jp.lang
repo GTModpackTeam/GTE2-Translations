@@ -8,38 +8,38 @@ tile.fission_casing.fuel_channel.name=燃料チャンネル
 tile.fission_casing.control_rod_channel.name=制御棒チャンネル
 tile.fission_casing.coolant_channel.name=冷却材チャンネル
 supercritical.machine.fuel_rod_input.name=燃料棒入力ポート
-supercritical.machine.fuel_rod_input.tooltip=機能と構造形成のため、下部に§f燃料チャンネル§7が必要です。
+supercritical.machine.fuel_rod_input.tooltip=下部に§f燃料チャンネル§7が必要
 supercritical.machine.fuel_rod_output.name=燃料棒出力ポート
-supercritical.machine.fuel_rod_output.tooltip=機能と構造形成のため、上部に§f燃料チャンネル§7が必要です。
+supercritical.machine.fuel_rod_output.tooltip=上部に§f燃料チャンネル§7が必要
 supercritical.machine.coolant_input.name=冷却材入力ポート
-supercritical.machine.coolant_input.tooltip=機能と構造形成のため、下部に§f冷却材チャンネル§7が必要です。
+supercritical.machine.coolant_input.tooltip=下部に§f冷却材チャンネル§7が必要
 supercritical.machine.coolant_output.name=冷却材出力ポート
-supercritical.machine.coolant_output.tooltip=機能と構造形成のため、上部に§f冷却材チャンネル§7が必要です。
+supercritical.machine.coolant_output.tooltip=上部に§f冷却材チャンネル§7が必要
 supercritical.machine.control_rod.name=制御棒ポート
-supercritical.machine.control_rod.tooltip=機能と構造形成のため、下部に§f制御棒チャンネル§7が必要です。
-supercritical.machine.control_rod.tooltip.1=燃料棒の間に配置すると、挿入時に中性子増倍率を低下させます！
+supercritical.machine.control_rod.tooltip=下部に§f制御棒チャンネル§7が必要
+supercritical.machine.control_rod.tooltip.1=燃料棒間に配置すると挿入時に中性子増倍率が低下
 supercritical.machine.control_rod_moderated.name=黒鉛先端制御棒ポート
-supercritical.machine.control_rod_moderated.tooltip=機能と構造形成のため、下部に§f制御棒チャンネル§7が必要です。
-supercritical.machine.control_rod_moderated.tooltip.1=燃料棒の間に配置し約30%%挿入すると、中性子増倍率を増加させます！
-supercritical.machine.nuclear.locking.item=原子炉起動時にロックされ、ロック中はアイテムの種類を変更できません。
-supercritical.machine.nuclear.locking.fluid=原子炉起動時にロックされ、ロック中は液体の種類を変更できません。
+supercritical.machine.control_rod_moderated.tooltip=下部に§f制御棒チャンネル§7が必要
+supercritical.machine.control_rod_moderated.tooltip.1=燃料棒間に配置し約30%%挿入で中性子増倍率が増加
+supercritical.machine.nuclear.locking.item=原子炉起動時にロック、ロック中はアイテム種類の変更不可
+supercritical.machine.nuclear.locking.fluid=原子炉起動時にロック、ロック中は液体種類の変更不可
 supercritical.machine.moderator_port.name=減速材ポート
-supercritical.machine.moderator_port.tooltip=機能と構造形成のため、下部に§f減速材ブロック§7(黒鉛など)が必要です。
+supercritical.machine.moderator_port.tooltip=下部に§f減速材ブロック§7(黒鉛など)が必要
 
-gregtech.multiblock.fission_reactor.description=核分裂炉は、燃料棒を配置して持続的な核分裂連鎖反応を起こします。これらの反応は冷却材で吸収できる熱(出力)を生成し、その後タービンで使用できます。例えば、蒸留水を冷却材として使用すると、各チャンネルは内部炉心深さのブロックあたり約2 EU/tの熱を吸収します。炉は様々な形状をとることができます。断面図はJEIで確認でき、炉はコントローラーから上下7ブロックまで延長できます。炉は上層と下層の特殊なハッチペアを通じて燃料棒/冷却材の入出力が可能です。制御棒ハッチも上層に配置でき、ユーザーに炉のより細かい制御を提供します。挿入量を増やすと中性子増倍率「実効k」(k_effとして表示)が低下します。これは最大出力に近づくまで出力に継続的に乗算される係数です。k_effが1を超えると炉の出力は最終的に増加し、1未満なら減少し、約1なら安定を維持します。実際、炉は時間経過とともにこれを自動調整し、安定した平衡状態に到達しようとします。これは手動でオーバーライドでき、k_effが1.05を超えている場合は制御不能になりメルトダウンを起こさないよう手動調整が必要になることがあります。K_effは炉内の中性子毒物にも影響され、炉の稼働中に濃度が時間とともに増加し(停止後もしばらく高濃度が維持されます)。k_effの「作用」速度は平均世代時間に依存し、これは次世代の中性子が生成されるまでの時間です。これは燃料棒に依存し(ツールチップで確認可能)、主に核分裂生成物の崩壊による遅発中性子の影響を受けます。出力は平均世代時間を(k_eff - 1)で割った時定数を持つ指数関数でモデル化できます。制御棒、燃料ハッチ、冷却材ハッチはすべて正しく形成するために下部に特殊な配管が必要です。使用するブロックはツールチップで確認してください。炉のハッチが満たされると、炉をロックして稼働を開始できます。これはハッチ内のアイテム/液体の種類が炉稼働中に変更できなくなることを意味します。炉内の燃料棒と冷却材チャンネルの配置は非常に重要です。燃料棒内の崩壊原子から生成された中性子は他の燃料棒で核分裂を引き起こすことができるため、複数の燃料棒チャンネルがある方がはるかに効果的です。中性子が燃料棒と相互作用する確率は、冷却材チャンネル内の蒸留水などの減速材によって遅くされると増加します。そのため、k_effを増加させるために燃料棒の間に冷却材チャンネルを配置すると効果的です(制御棒は逆の効果があります)。燃料棒も出力に比例した速度で消耗します。600 MJの燃料棒は1 MWで600秒、または600 MWで1秒で消耗します。注意：このマルチブロックがメンテナンス問題を受けると、冷却システムが時折停止します。ただし、冷却材チャンネルは高温冷却材の温度が実際に炉より高い場合にのみ動作し、全体で最大出力と同じ熱量しか出力できません。
-gregtech.multiblock.gas_centrifuge.description=ガス遠心分離機は、特にウランの同位体精製プロセスに役立ちます。六フッ化ウランをガス遠心分離機に繰り返し入れることで、核燃料を製造するのに十分な純度の高濃縮六フッ化ウランを得ることができます。長さ1ブロックごとに並列処理数が1増加します。
-gregtech.multiblock.heat_exchanger.description=熱交換器は、ある流体から熱を取り出し、周囲環境に放射するか、別の流体に移すことができます。核分裂炉からの高温冷却材を使用して、蒸気タービン用の蒸気を生成するのに使用できます。
-gregtech.multiblock.spent_fuel_pool.description=使用済燃料プールは、核分裂炉から出たばかりの高温の使用済燃料棒を冷却し、後で処理できるようにします。構造が水で満たされている場合にのみ機能します。入力ハッチに水を供給するか、手動で水ブロックを配置してください。長さ1ブロックごとに並列処理数が32増加します。
+gregtech.multiblock.fission_reactor.description=燃料棒を配置して持続的な核分裂連鎖反応を発生させる装置。反応で生成された熱(出力)は冷却材で吸収し、タービンで利用可能。蒸留水を冷却材として使用した場合、各チャンネルは炉心深さ1ブロックあたり約2 EU/tの熱を吸収。炉は様々な形状が可能で、断面図はJEIで確認可能。コントローラーから上下7ブロックまで延長可能。上層と下層の特殊ハッチペアで燃料棒/冷却材の入出力が可能。制御棒ハッチは上層に配置可能で、炉のより細かい制御を提供。挿入量を増やすと中性子増倍率「実効k」(k_eff)が低下。k_effは最大出力に近づくまで出力に継続的に乗算される係数。k_effが1超で出力増加、1未満で減少、約1で安定維持。炉は時間経過で自動調整し平衡状態に到達しようとする。手動オーバーライド可能で、k_effが1.05超の場合は制御不能・メルトダウン防止のため手動調整が必要。k_effは炉内の中性子毒物にも影響され、稼働中に濃度が増加(停止後もしばらく高濃度維持)。k_effの作用速度は平均世代時間(次世代中性子生成までの時間)に依存。燃料棒依存でツールチップで確認可能、主に核分裂生成物崩壊による遅発中性子の影響。出力は平均世代時間を(k_eff - 1)で割った時定数の指数関数でモデル化可能。制御棒・燃料ハッチ・冷却材ハッチは正しい構造形成のため下部に特殊配管が必要(ツールチップ参照)。ハッチが満たされると炉をロックして稼働開始可能。ロック中はハッチ内のアイテム/液体種類の変更不可。燃料棒と冷却材チャンネルの配置は重要。燃料棒内の崩壊原子から生成された中性子は他の燃料棒で核分裂を引き起こすため、複数の燃料棒チャンネルがより効果的。中性子が燃料棒と相互作用する確率は冷却材チャンネル内の蒸留水等の減速材で遅くされると増加。k_eff増加には燃料棒間に冷却材チャンネル配置が効果的(制御棒は逆効果)。燃料棒は出力に比例した速度で消耗。600 MJの燃料棒は1 MWで600秒、または600 MWで1秒で消耗。注意: メンテナンス問題発生時は冷却システムが時折停止。冷却材チャンネルは高温冷却材温度が炉より高い場合のみ動作し、全体で最大出力と同等の熱量のみ出力可能。
+gregtech.multiblock.gas_centrifuge.description=特にウランの同位体精製に有用な装置。六フッ化ウランを繰り返し処理することで核燃料製造に十分な純度の高濃縮六フッ化ウランを取得可能。長さ1ブロックごとに並列処理数+1。
+gregtech.multiblock.heat_exchanger.description=流体から熱を取り出し、周囲環境に放射または別の流体に移す装置。核分裂炉からの高温冷却材で蒸気タービン用の蒸気を生成可能。
+gregtech.multiblock.spent_fuel_pool.description=核分裂炉から出た高温の使用済燃料棒を冷却し後処理可能にする装置。構造が水で満たされている場合のみ機能。入力ハッチに水を供給するか手動で水ブロックを配置。長さ1ブロックごとに並列処理数+32。
 
 metaitem.nuclear.tooltip.radioactive=§c危険な放射線を放出
 metaitem.nuclear.tooltip.duration=総熱エネルギー: %d MJ
 metaitem.nuclear.tooltip.temperature=融点: %d K
 metaitem.nuclear.tooltip.cross_section_fast=高速中性子確率: %d barn
 metaitem.nuclear.tooltip.cross_section_slow=低速中性子確率: %d barn
-metaitem.nuclear.tooltip.neutron_time.0=平均中性子: %ds (§1安全§r)
-metaitem.nuclear.tooltip.neutron_time.1=平均中性子: %ds (§2より安全§r)
-metaitem.nuclear.tooltip.neutron_time.2=平均中性子: %ds (§c危険§r)
-metaitem.nuclear.tooltip.neutron_time.3=平均中性子: %ds (§4非常に危険§r)
+metaitem.nuclear.tooltip.neutron_time.0=平均中性子時間: %ds (§1安全§r)
+metaitem.nuclear.tooltip.neutron_time.1=平均中性子時間: %ds (§2より安全§r)
+metaitem.nuclear.tooltip.neutron_time.2=平均中性子時間: %ds (§c危険§r)
+metaitem.nuclear.tooltip.neutron_time.3=平均中性子時間: %ds (§4非常に危険§r)
 metaitem.nuclear.tooltip.moderation_factor=減速強度: %d
 metaitem.nuclear.tooltip.absorption_factor=吸収強度: %d
 
@@ -130,9 +130,9 @@ tile.nuclear_casing.gas_centrifuge_heater.name=ガス遠心分離機ヒーター
 tile.gas_centrifuge_casing.gas_centrifuge_column.name=ガス遠心分離機カラム
 
 supercritical.machine.fission_reactor.name=核分裂炉
-supercritical.machine.fission_reactor.tooltip.1=許可される形状はプレビューで確認してください。
-supercritical.machine.fission_reactor.tooltip.2=§c温度/圧力が高すぎるとメルトダウン/爆発する可能性があります！
-supercritical.machine.fission_reactor.tooltip.3=§cJEIの情報ページを必ず読んでください！非常に重要です！
+supercritical.machine.fission_reactor.tooltip.1=許可される形状はプレビューで確認
+supercritical.machine.fission_reactor.tooltip.2=§c温度/圧力が高すぎるとメルトダウン/爆発の可能性あり!
+supercritical.machine.fission_reactor.tooltip.3=§cJEIの情報ページを必読!
 
 supercritical.machine.heat_exchanger.name=熱交換器
 supercritical.machine.spent_fuel_pool.name=使用済燃料プール
@@ -144,14 +144,14 @@ supercritical.machine.heat_exchanger.tooltip=分子レベルの熱いポテト�
 supercritical.machine.spent_fuel_pool.tooltip.parallel=§d最大並列数: §fプール長1ブロックあたり%s
 supercritical.machine.gas_centrifuge.tooltip.parallel=§d最大並列数: §f1 + 追加カラム数
 
-supercritical.machine.fluid_auto_fill.tooltip=§3このマルチブロック内の液体ブロックは、入力タンクに供給することで自動的に充填できます
+supercritical.machine.fluid_auto_fill.tooltip=§3入力タンクに供給するとマルチブロック内の液体ブロックを自動充填
 
 supercritical.coolant.general=§9冷却材として使用可能§7
 supercritical.coolant.exit_temp=高温冷却材温度: %d K
 supercritical.coolant.heat_capacity=熱容量: %d J/kgK
 supercritical.coolant.cooling_factor=熱伝達: %d W/(m^2K)
 supercritical.coolant.moderation_factor=減速断面積: %d barn
-supercritical.coolant.accumulates_hydrogen=§c1500Kで水素が蓄積
+supercritical.coolant.accumulates_hydrogen=§c1500Kで水素蓄積
 
 supercritical.gui.fission.control_rod_insertion=制御棒挿入量: %d
 supercritical.gui.fission.coolant_flow=冷却材流量: %d L/t (チャンネルあたり)
@@ -162,35 +162,35 @@ supercritical.gui.fission.k_eff=中性子増倍率: %f
 supercritical.gui.fission.depletion=現在の消耗度: %f%%
 supercritical.gui.fission.depleted_rod=%sを生成中
 
-supercritical.gui.fission.lock.locked=原子炉ロック中、稼働中！
-supercritical.gui.fission.lock.unlocked=原子炉は稼働していません
+supercritical.gui.fission.lock.locked=原子炉ロック済み、稼働中!
+supercritical.gui.fission.lock.unlocked=原子炉未稼働
 supercritical.gui.fission.lock.should_lock=起動中...
-supercritical.gui.fission.lock.missing_fuel=バスに燃料がありません！
-supercritical.gui.fission.lock.missing_coolant=ハッチに冷却材がありません！
-supercritical.gui.fission.lock.fuel_clogged=出力燃料バスが満杯です！
-supercritical.gui.fission.lock.no_fuel_channels=燃料チャンネルがありません！
-supercritical.gui.fission.lock.invalid_component=エラー発生！ログファイルを確認してください
+supercritical.gui.fission.lock.missing_fuel=バスに燃料なし!
+supercritical.gui.fission.lock.missing_coolant=ハッチに冷却材なし!
+supercritical.gui.fission.lock.fuel_clogged=出力燃料バス満杯!
+supercritical.gui.fission.lock.no_fuel_channels=燃料チャンネルなし!
+supercritical.gui.fission.lock.invalid_component=エラー発生! ログファイルを確認
 supercritical.gui.fission.lock.disabled=燃料と冷却材の種類をロックして原子炉を起動
 supercritical.gui.fission.lock.enabled=燃料と冷却材の種類のロックを解除して原子炉を停止
 
-supercritical.gui.fission.helper.disabled=笑顔の時は制御棒を自動調整しているよ！ - スマイリー(制御棒スペシャリスト)
-supercritical.gui.fission.helper.enabled=笑顔の時は制御棒を自動調整しているよ！ - スマイリー(制御棒スペシャリスト)
+supercritical.gui.fission.helper.disabled=笑顔の時は制御棒を自動調整中! - スマイリー(制御棒スペシャリスト)
+supercritical.gui.fission.helper.enabled=笑顔の時は制御棒を自動調整中! - スマイリー(制御棒スペシャリスト)
 
 supercritical.gui.locked=(ロック中)
-supercritical.gui.void_fuel=現在の部分消耗燃料を廃棄！
+supercritical.gui.void_fuel=現在の部分消耗燃料を廃棄!
 
-supercritical.multiblock.pattern.error.hatch_invalid=§cこのハッチはまだ有効ではありません！§r
+supercritical.multiblock.pattern.error.hatch_invalid=§cこのハッチは未だ無効!§r
 
 supercritical.multiblock.fission_reactor.diameter=直径: %s
 supercritical.multiblock.fission_reactor.height=高さ: %s
 
-supercritical.multiblock.fission_reactor.turn_on=原子炉を起動しますか？(すべてのハッチがロックされます)
-supercritical.multiblock.fission_reactor.turn_off=原子炉を停止しますか？
-supercritical.multiblock.fission_reactor.structure_incomplete=原子炉を切り替えできません。構造が不完全です。
-supercritical.multiblock.fission_reactor.invalid_components=原子炉の起動に失敗しました。一部の入力ポートが無効です。チャンネルがそれぞれのポートと正しく配置されているか確認してください。
-supercritical.multiblock.fission_reactor.missing_inputs=原子炉の起動に失敗しました。一部の入力ポートが空か、不適切な内容物があります。ポートを確認してください。
-supercritical.multiblock.spent_fuel_pool.obstructed=プールが満たされていません！
-supercritical.multiblock.spent_fuel_pool.obstructed.desc=プールは機能するために水で満たされている必要があります。
+supercritical.multiblock.fission_reactor.turn_on=原子炉を起動?(すべてのハッチがロック)
+supercritical.multiblock.fission_reactor.turn_off=原子炉を停止?
+supercritical.multiblock.fission_reactor.structure_incomplete=原子炉切り替え不可。構造が不完全
+supercritical.multiblock.fission_reactor.invalid_components=原子炉起動失敗。一部の入力ポートが無効。チャンネルとポートの配置を確認
+supercritical.multiblock.fission_reactor.missing_inputs=原子炉起動失敗。一部の入力ポートが空または不適切な内容物あり。ポートを確認
+supercritical.multiblock.spent_fuel_pool.obstructed=プール未充填!
+supercritical.multiblock.spent_fuel_pool.obstructed.desc=機能するには水で満たす必要あり
 
 gregtech.fluid.molten=溶融%s
 
