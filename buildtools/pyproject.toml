@@ -1,10 +1,10 @@
 [project]
 name = "gte2-buildtools"
-version = "1.0.0"
+version = "1.1.0"
 description = "Build tools for GTE2 Translations"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
-    "deepl>=1.25.0",
+    "deepl>=1.27.0",
 ]
 
 [tool.uv]
