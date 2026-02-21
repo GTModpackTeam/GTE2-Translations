@@ -861,7 +861,7 @@ gregtech.material.gtfo_hydrogen_cyanide=シアン化水素
 
 gregtechfoodoption.fluid.fertilizer=§2スプリンクラーに用いると%d%%効率的
 metaitem.cover.sprinkler.name=スプリンクラー
-metaitem.cover.sprinkler.tooltip=§4下向き§7のカバーであり、液体を9x9内の作物に散布します。/n地面まで§63ブロックの空間§7が必要です。/nソフトマレットで右クリックすると、パーティクルがOFFになります。
+metaitem.cover.sprinkler.tooltip=§4下向き§7のカバーであり、流体を9x9内の作物に散布します。/n地面まで§63ブロックの空間§7が必要です。/nソフトマレットで右クリックすると、パーティクルがOFFになります。
 gregtech.material.gtfo_blue_vitriol=硫酸銅(II)
 gregtech.material.gtfo_rubber_sap=ゴムの樹液
 gregtech.material.gtfo_blood=血液
@@ -1166,7 +1166,7 @@ gregtechfoodoption.seed.root_crop=§r種が収穫できる§4直前のみ§r収�
 
 gregtechfoodoption.multiblock.kitchen.no_recipe=レシピアイテムがありません! (または未設定です)
 gregtechfoodoption.multiblock.kitchen.buses_full=アイテムバスが一杯です!
-gregtechfoodoption.multiblock.kitchen.hatches_full=液体ハッチが一杯です!
+gregtechfoodoption.multiblock.kitchen.hatches_full=流体ハッチが一杯です!
 gregtechfoodoption.multiblock.kitchen.bad_machines=正しい機械がありません/機械のTierが足りません!
 gregtechfoodoption.multiblock.kitchen.no_ingredients=材料がありません!
 gregtechfoodoption.multiblock.kitchen.probably_fine=レシピを実行中...
