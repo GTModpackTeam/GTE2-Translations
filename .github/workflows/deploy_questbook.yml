@@ -126,7 +126,7 @@ jobs:
         run: ls -lhR ./artifacts/
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: "${{ env.MODPACK_VERSION }}"
           draft: false
